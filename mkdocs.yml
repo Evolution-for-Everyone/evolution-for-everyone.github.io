@@ -1,5 +1,5 @@
 site_name: Evolution for Everyone
-site_url: evolution-for-everyone.github.io
+site_url: https://evolution-for-everyone.github.io
 theme:
   name: material 
   font: 
