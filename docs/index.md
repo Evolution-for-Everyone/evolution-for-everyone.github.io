@@ -1,17 +1,18 @@
-# Welcome to MkDocs
+# Welcome to Evolution for Everyone!
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+We are outreach organization making evolutionnary biology more accessible to students and scientists across the world!
 
-## Commands
+🍄 Our mission is to promote equitable access to knowledge, resources and opportunities in evolutionary biology, empowering equity-deserving students to become scientists.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+🦋 We offer free workshops in universities!
+if you are interested in having a workshop at your university, please reach out at leticiamagpali@dal.ca
 
-## Project layout
+🦋 You can also learn by yourself right here!
+To acess all our workshops tutorials, data and materials, as well as outside resources, check our workshops tab.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+🦋 If you are a collaborator, find our project roadmap here.
+
+🦋 Bioinformatics for Everyone has received funding and support from the following organizations:
+
+Digital Alliance of Canada's EDIA Champions Program
+OLS Open Seeds Mentoring and Training Program
