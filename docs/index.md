@@ -20,4 +20,3 @@ OLS Open Seeds Mentoring and Training Program
 ____________
 
 Register for the Bioinformatics for Beginners worskhop series [here](https://forms.gle/fSQfo21Q91G8LRBv6)!
-{ #register-for-the-bioinformatics-for-beginners-worskhop-series-herehttpsformsglefsqfo21q91g8lrbv6 }
