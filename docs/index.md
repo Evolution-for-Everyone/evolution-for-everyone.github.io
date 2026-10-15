@@ -16,3 +16,7 @@ To acess all our workshops tutorials, data and materials, as well as outside res
 
 Digital Alliance of Canada's EDIA Champions Program
 OLS Open Seeds Mentoring and Training Program
+
+____________
+
+Register for the Bioinformatics for Beginners worskhop series here[https://forms.gle/fSQfo21Q91G8LRBv6]!
