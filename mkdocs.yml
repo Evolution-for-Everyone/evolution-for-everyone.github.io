@@ -5,6 +5,12 @@ theme:
   font: 
     text: Roboto
     code: Red Hat Mono
+  nav:
+  - Home: index.md
+  - Tutorial 1 - Introduction to command line and bash: tutorial_1.md
+  - Tutorial 2 - Working on a server: tutorial_2.md
+  - Tutorial 3 - Downloading genomic sequences: tutorial_3.md
+
   palette:
     - scheme: slate
       toggle:
@@ -12,6 +18,10 @@ theme:
         name: Dark mode
       primary: purple
       accent: deep purple
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
 
     # Light Mode
     - scheme: default
