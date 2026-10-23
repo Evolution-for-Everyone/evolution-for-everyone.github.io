@@ -3,7 +3,8 @@
 Once we have extracted the gene sequences from NCBI, we need to align them.
 
 !!! important "What does aligning mean?"
-    Alignment arranges similar parts of sequences from different species so that we can compare them. In an alignment, each position is treated as descended from a common ancestral sequence.
+    Alignment arranges similar parts of sequences from different species so that we can compare them.   
+    In an alignment, each position is treated as descended from a common ancestral sequence.
 
 🍄 There are many software programs for building multi-species alignments. Here we are going to learn about two popular ones: [MAFFT](https://mafft.cbrc.jp/alignment/server/) and [PRANK](http://wasabiapp.org/software/prank/#Translated_alignment_and_codon_alignment).
 
