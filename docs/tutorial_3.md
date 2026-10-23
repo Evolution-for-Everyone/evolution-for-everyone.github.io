@@ -1,9 +1,3 @@
-## Learning goals
-* [What do genomic sequences look like on my computer?](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-3:-Downloading-genomic-sequences#1-what-do-genomic-sequences-look-like-on-my-computer)
-* [Downloading genomic sequences](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-3:-Downloading-genomic-sequences#2-downloading-genomic-sequences)
-* [Downloading sequences from NCBI Nucleotide](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-3:-Downloading-genomic-sequences#-downloading-sequences-from-ncbi-nucleotide)
-* [Downloading sequences using command-line](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-3:-Downloading-genomic-sequences#-downloading-sequences-using-command-line)
-
 ## 1. What do genomic sequences look like on my computer?
 
 A genomic sequence is any sequence that has been extracted from a genome. <br>
@@ -11,15 +5,18 @@ A genomic sequence is any sequence that has been extracted from a genome. <br>
 
 These DNA sequences are often saved as a text file that can have multiple formats - the most common format for evolutionary analyses is **FASTA**.
 
-> [!IMPORTANT] 
+
+> [!IMPORTANT]  
 > A FASTA file is made up of two elements:
 > * header: a line at the beginning of the sequence that tells you information about it. The header is formed by the symbol `>` followed by a line of text.
 > * sequence: the actual sequence of nucleotides or amino acids that make up that gene, protein, or non-coding element. The sequence starts on the line immediately below, and usually there's a line break every 60-80 characters. 
+
 > ```
 > >XM_019925131.2:314-2584 PREDICTED: Tursiops truncatus forkhead box P2 (FOXP2), mRNA`
 > ATGATGCAGGAATCTGCGACAGAGACAATAAGCAACAGTTCAATGAATCAAAATGGAATGAGCACTCTAA`
 > GCAGCCAATTAGATGCTGGCAGCAGAGATGGAAGATCAAGTGGTGACACCAGCTCTGAAGTAAGCACAGT`
 > ```
+>
 
 ## 2. Downloading genomic sequences
 

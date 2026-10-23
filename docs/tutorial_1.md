@@ -7,10 +7,9 @@ In Linux and MacOS systems, the terminal uses a programming language called **ba
 
 You can use the terminal to do anything you normally do in your computer! (for example, running programs, creating, editing and accessing files and folders.)
 
-> [!TIP]
-> _What's so special about the terminal?_
-> 
-> It allows you to run a lot of programs that don't have a graphic interface! 
+!!! tip
+    _What's so special about the terminal?_  
+    It allows you to run a lot of programs that don't have a graphic interface! 
 
 Many programs we use for analysis in evolutionary biology don't have a _graphic interface_ - that means they don't have an app, a screen or clickable icons, and we have to interact with them using only programming language.  
 
@@ -44,24 +43,27 @@ user@computer directory % # if you are using MacOS
     
 user@computer:directory$ # if you are using Linux/Unix
 ```
-> [!TIP]
-> This line is called the **prompt**, and it means the computer is ready to accept a command from you - in other words, it's _prompting_ you.
 
-🍄 **Now let's break down the elements of the prompt:**
 
-1️⃣ `user` and `computer` are the names you set up for yourself and your computer
-For example, <ins>my user name is letixa and my computer name is eujenio</ins>. You can set them to anything you want! 
+!!! tip
+  
+    This line is called the **prompt**, and it means the computer is ready to accept a command from you - in other words, it's _prompting_ you.
 
-2️⃣ `directory` is the folder you are currently in (*computer people use this fancy name directory, which really just means folder*).  
+  🍄 **Now let's break down the elements of the prompt:**
 
-* some operational systems (OS) will only show the name of the directory, while others will show the whole path to that directory.
-* when you open your terminal, the directory will show as `~`. This is a path symbol that represents your **HOME directory**.
+  1️⃣ `user` and `computer` are the names you set up for yourself and your computer
+  For example, <ins>my user name is letixa and my computer name is eujenio</ins>. You can set them to anything you want! 
 
-3️⃣ `$` or `%` is a prompt symbol, indicating that the terminal is waiting for a command.  
-When you see this symbol, it means it's ok to type stuff on the terminal!
-    
-_What about the `(base)` that shows on my screenshot?_  
-This is to indicate which environment you are in - we will see more details about that in the future.
+  2️⃣ `directory` is the folder you are currently in (*computer people use this fancy name directory, which really just means folder*).  
+
+  * some operational systems (OS) will only show the name of the directory, while others will show the whole path to that directory.
+  * when you open your terminal, the directory will show as `~`. This is a path symbol that represents your **HOME directory**.
+
+  3️⃣ `$` or `%` is a prompt symbol, indicating that the terminal is waiting for a command.  
+  When you see this symbol, it means it's ok to type stuff on the terminal!
+      
+  _What about the `(base)` that shows on my screenshot?_  
+  This is to indicate which environment you are in - we will see more details about that in the future.
 
 
 ## 3. Using bash in the  terminal
@@ -132,7 +134,7 @@ cd: no such file or directory: work
 
 In this error, the computer is saying "there's nothing called work here". Because you are typing the command from your home, and your work directory is not inside home (it is inside home > Documents).
 
-> [!TIP]
+!!! tip
 > **And here we get to an important terminal lesson: <br>**
 > A command on the terminal only works if your are running it from the correct location!
 > That basically means that:
@@ -238,7 +240,9 @@ You can now navigate to `tutorials` and check if `README.txt` is there, like thi
 (base) letixa@eugenio Documents % cd tutorials 
 (base) letixa@eugenio tutorials % ls
 README.txt           
-````
+```
+
+
 Success!
 
 ## 4. Challenge: creating a folder structure
@@ -252,11 +256,11 @@ A sandbox is a place where we can test everything without compromising our analy
 
 <details>
 
+
 <summary>Click to check command</summary>
 
-```bash
-   mkdir sandbox
- ```
+mkdir sandbox
+
 </details>
 
 🐞 Create one directory for each tutorial. <br>
@@ -266,15 +270,15 @@ Suggestion of name: `tutorial_1`, `tutorial_2`, etc (always use `_` instead of s
 
 <summary>Click to check command</summary>
 
-There's two ways you can do this:
-* using mkdir individually for each folder, or 
-* creating all folders at once:
-```bash
-   mkdir tutorial_1 tutorial_2 tutorial_3 tutorial_4 tutorial_5 tutorial_6
- ```
+There are two ways you can do this:  <br> 
+
+- Use `mkdir` individually for each folder, or <br>
+- Create all folders at once: mkdir tutorial_1 tutorial_2 tutorial_3 tutorial_4 tutorial_5 tutorial_6
+
 </details>
 
 Now when you list the content of your master folder, you should see something like this:
+
 ```bash 
 (base) letixa@eugenio tutorials % ls
 README.txt tutorial_1 tutorial_3 tutorial_5
@@ -283,7 +287,8 @@ sandbox    tutorial_2 tutorial_4 tutorial_6
 
 > [!WARNING]
 > **Got an error after typing a command?** <br>
-> Here's a few things you can check before telling your computer to go to %@#! 
+> Here's a few things you can check before telling your computer to go to %@#!   
+> 
 > * Are you in the right folder? 
 > * Did you type the right pathways for the input options?
 > * Did you spell everything right? No typos?

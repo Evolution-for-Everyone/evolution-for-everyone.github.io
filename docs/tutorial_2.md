@@ -1,12 +1,3 @@
-## Learning goals
-* [Server? What is that?](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-2:-Working-on-a-server#1-server-what-is-that)
-* [Accessing a server](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-2:-Working-on-a-server#2-accessing-a-server)
-* [The Alliance servers](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-2:-Working-on-a-server#-the-alliance-servers)
-* [The Awarnach server](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-2:-Working-on-a-server#-the-awarnach-server)
-* [Transferring files between the server and your computer](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-2:-Working-on-a-server#3-transferring-files-between-the-server-and-your-computer)
-* [Transferring files via command line](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-2:-Working-on-a-server#-transferring-files-via-command-line)
-* [Transferring files with Filezilla](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-2:-Working-on-a-server#-transferring-files-with-filezilla)
-
 ## 1. Server? What is that?
 
 If you are in a bioinformatics lab, you will probably have to work on a server at some point. When I first joined a lab back in my undergrad years, _server_ was this ethereal, mysterious word to describe a parallel universe that I could access from my computer to run some analysis. Back then, I had so many unanswered questions:
@@ -22,7 +13,7 @@ Let's start this tutorial by answering those questions:
 ### 🍄 What is a server?
 A server is a supercomputer or a collection of computers working together, sitting in a room somewhere. The reason why we need servers is the same as why we, as humans, get together to solve complex problems - for some kinds of problems, one brain (one computer) is enough, for others, we need a room of people thinking together (server).
 
-A small server can be just a few computers in a research office, but a large server can look like this: \
+A small server can be just a few computers in a research office, but a large server can look like this:    
 _This is the Narval server, located at the [École de technologie supérieure](https://www.etsmtl.ca/en/home) in Montreal._
 
 <img src="https://github.com/user-attachments/assets/1c1643d0-97d3-4352-a64a-62d15ed624fe" width="500">
@@ -49,21 +40,21 @@ The `ssh` command allows you to log in to any server, as long as you have these 
 After you type that command, the prompt will ask you for a password, as we'll see in the examples below. <br>
 
 ### 🍄 The Alliance servers
-The Digital Research Alliance of Canada has a collection of servers available to any researcher affiliated with a Canadian institution: \
+The Digital Research Alliance of Canada has a collection of servers available to any researcher affiliated with a Canadian institution:    
 [Beluga](https://docs.alliancecan.ca/wiki/B%c3%a9luga/en), [Cedar](https://docs.alliancecan.ca/wiki/Cedar), [Graham](https://docs.alliancecan.ca/wiki/Graham), [Narval](https://docs.alliancecan.ca/wiki/Narval/en#Node_characteristics) and [Niagara](https://docs.alliancecan.ca/wiki/Niagara)
 
-🐞 **Registering for a server account with the Alliance** \
+🐞 **Registering for a server account with the Alliance**    
 To get access to the Alliance's servers, first you need to create an account by [registering](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account) with the Alliance CCDB 
 * if you are a PI, you can apply directly for an account 
 * if you are a student/member of a research group, your supervisor needs have an account first, so they can sponsor your application at no cost.
 
-🐞 **Setting up your server account** \
+🐞 **Setting up your server account**    
 Once your application has been approved (usually takes 1-2 business days), and before you can use the server, you need to set up:
 1. [Multi-factor Authentication](https://docs.alliancecan.ca/wiki/Multifactor_authentication)
 2. [SSH-keys](https://docs.alliancecan.ca/wiki/SSH_Keys) (recommended) 
 3. and for Niagara, you need to access the [opt-in page](https://ccdb.alliancecan.ca/services/opt_in) and click on the join button. In the future, this step will be required for other servers as well.
 
-🐞 **Logging into your account** \
+🐞 **Logging into your account**    
 Now, you can use the `ssh` command to log in to your server account! Just type the following command on the terminal:
 
 ```bash
@@ -184,7 +175,7 @@ cd Documents
 ```
 In my case, my tutorials folder is inside my Google Drive, so my cd command is a little longer:
 ```bash
-cd Google\ Drive/My\ Drive/evolution4everyone/bioinformatics-for-everyone/solved_tutorials/
+cd Google    Drive/My    Drive/evolution4everyone/bioinformatics-for-everyone/solved_tutorials/
 ```
 Once you are inside tutorials, you can type the scp command: 
 ```bash
