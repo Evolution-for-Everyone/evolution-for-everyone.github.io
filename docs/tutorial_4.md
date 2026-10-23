@@ -54,11 +54,11 @@ MAFFT is available online and from the command line, and we will learn how to us
 
     You should now see your sequence files in the folder.
 
-??? note "**Awarnach users only:**"  
-    Activate the conda environment where MAFFT is installed. MAFFT will not be available until you activate it.
+    ??? note "**Awarnach users only:**"  
+        Activate the conda environment where MAFFT is installed. MAFFT will not be available until you activate it.
 
-        ```sh
-        source activate mafft
+            ```sh
+            source activate mafft
         ```
 
 5. Run MAFFT using a command with this format:
