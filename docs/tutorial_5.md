@@ -3,7 +3,7 @@
 Gene trees, like other phylogenetic trees, represent a hypothesis about the evolutionary history of a group of organisms.
 While species trees may be inferred using many genes and other evidence, **a gene tree is inferred from an alignment of one gene**.
 
-!!! note "Gene trees and species trees"
+!!! tip "Gene trees and species trees"
     A gene tree represents the evolutionary history of a particular gene. It may therefore differ from a species tree, which represents the evolutionary history of the species.
 
 📍 Similarly, we can use a protein alignment to make a protein tree, or a codon alignment to make a codon tree.

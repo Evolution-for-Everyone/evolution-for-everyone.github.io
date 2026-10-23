@@ -8,7 +8,7 @@ In the previous tutorials, we learned how to:
 
 Now, we are going to use our sequence alignments and gene trees as input for an evolutionary model using a program called codeml.
 
-!!! important "What is a model?"
+!!! tip "What is a model?"
     **A model is a representation of a process**—in our case, the evolutionary process. Codeml models are mathematical representations of how genomic sequences evolve.
 
 ### 🍂 Why are evolutionary models important?
@@ -23,7 +23,7 @@ We use evolutionary models to ask questions and test hypotheses about how a geno
 
 There are many ways to represent evolution mathematically in a model. In molecular evolution (the study of genes, proteins, and related molecules), one popular measure is the **omega ratio**, or *ω*.
 
-!!! important "The omega ratio"
+!!! tip "The omega ratio"
     **ω** measures natural selection acting on a sequence. It indicates the relative rates of nonsynonymous and synonymous substitutions, and is used to infer patterns of selection.
 
 See the infographic below for a brief explanation of the **ω ratio**, and read [these slides](https://drive.google.com/file/d/1ncnQr0jN3sovM9SUYjGnSPND9xjAoe4N/view?usp=sharing) for more details.
@@ -99,13 +99,13 @@ To generate a codon alignment, we will use PRANK to process the **FOXP2 nucleoti
     prank -d=FOXP2_nuc_aligned.fasta -o=FOXP2_codon_aligned -codon -F
     ```
 
-#### Converting the alignment format
+3. Convert the alignment format
 
-Codeml requires an alignment in PAML format, which is a modified PHYLIP format. To convert your codon alignment, use PRANK with the `-convert` option:
+    Codeml requires an alignment in PAML format, which is a modified PHYLIP format. To convert your codon alignment, use PRANK with the `-convert` option:
 
-```sh
-prank -convert -d=alignment_codon.fas -f=paml -o=output_file_name -keep
-```
+    ```sh
+    prank -convert -d=alignment_codon.fas -f=paml -o=output_file_name -keep
+    ```
 
 ### 🍂 Creating a codon tree
 
@@ -181,14 +181,14 @@ Each line contains a codeml option, its value, and a comment after `*`. Codeml i
 
 The control file has many options, but you can think of them as settings for fine-tuning the model. In this tutorial, we will focus on six options:
 
-#### 🍁 Essential options for codeml beginners
+!!! tip "Essential options for codeml beginners"
 
-1. `seqfile` — the name or path to your codon alignment.
-2. `treefile` — the name or path to your codon tree.
-3. `outfile` — the name for your codeml output file.
-4. `model` — the branch model to run.
-5. `NSsites` — the site model to run.
-6. `omega` — the initial omega value.
+    `seqfile` — the name or path to your codon alignment.  
+    `treefile` — the name or path to your codon tree.  
+    `outfile` — the name for your codeml output file.  
+    `model` — the branch model to run.  
+    `NSsites` — the site model to run.  
+    `omega` — the initial omega value.
 
 Now let's configure the control file for model M0 by setting these options.
 

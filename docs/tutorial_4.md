@@ -2,7 +2,7 @@
 
 Once we have extracted the gene sequences from NCBI, we need to align them.
 
-!!! important "What does aligning mean?"
+!!! tip "What does aligning mean?"
     Alignment arranges similar parts of sequences from different species so that we can compare them.   
     In an alignment, each position is treated as descended from a common ancestral sequence.
 
@@ -54,13 +54,14 @@ MAFFT is available online and from the command line, and we will learn how to us
 
     You should now see your sequence files in the folder.
 
-5. **Awarnach users only:** Activate the conda environment where MAFFT is installed. MAFFT will not be available until you activate it.
+??? note "**Awarnach users only:**"  
+    Activate the conda environment where MAFFT is installed. MAFFT will not be available until you activate it.
 
-    ```sh
-    source activate mafft
-    ```
+        ```sh
+        source activate mafft
+        ```
 
-6. Run MAFFT using a command with this format:
+5. Run MAFFT using a command with this format:
 
     ```sh
     mafft [options] input.fasta > output.fasta
