@@ -83,34 +83,69 @@ This part of the tutorial was adapted from NCBI's own tutorial: [Get one protein
 
     Many comparative genomic studies use one sequence per gene. A common approach is to select the longest transcript, although the longest transcript is not necessarily the best representative of the complete coding sequence in every case.
 
-1. Access our lab server, Awarnach. For a reminder, see [Tutorial 2](tutorial_2.md).
+??? info "For Awarnach server users"
+    Access our lab server, Awarnach. For a reminder, see [Tutorial 2](tutorial_2.md).
 
-2. Activate the environment where `ncbi_datasets` is installed:
+    Activate the environment where `ncbi_datasets` is installed:
 
     ```sh
     source activate ncbi_datasets
     ```
 
-3. Navigate to your `tutorial_3` folder using `cd` followed by the path to the folder:
+1. Download the `ncbi-datasets` command-line tool from NCBI using conda:
 
     ```sh
-    cd tutorials_2025/tutorial_3/
+    conda install -c conda-forge ncbi-datasets-cli
     ```
 
-4. We will now download a representative FOXP2 transcript for each species. For the steps below, copy and paste the commands into your terminal and press Enter. Read each command to understand what it does.
+    If that doesn't work, you can find alternative ways [here](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/).     
 
-🐛 This part can be challenging for beginners, so each completed step unlocks a celebratory cat GIF. **You got this!**
+2. Navigate to your `tutorial_3` folder using `cd` followed by the path to the folder:
+
+    ```sh
+    cd tutorials_2026/tutorial_3/
+    ```
+
+3. We will now download the longest FOXP2 transcript for each species. For the steps below, copy and paste the commands into your terminal and press `Enter`.   
+**Don't forget** to read each command to understand what it does!
+
+🐛 This part can be challenging for beginners, so each completed step unlocks a celebratory cat GIF.  
+**You got this!**
 
 ![You can do it](https://github.com/user-attachments/assets/a5450877-37d5-4e5c-ace8-7ca774857788){ width="300" }
 
-**🐞 Getting FOXP2 metadata**
+#### **🐞 Getting FOXP2 metadata**
 
-We will use the `datasets summary` command to retrieve metadata about our FOXP2 sequences. As input, we will use the accession numbers of the 10 sequences listed earlier. This command writes a data report in JSON Lines format to `foxp2_orthologs.jsonl`.
+We will use the `datasets summary` command to retrieve metadata about our FOXP2 sequences.  
+We can do this in two ways: by providing the **gene name** OR the **accession numbers** of the sequences we want to download.  
 
-```bash
-datasets summary gene accession \
-NM_014491.4 XM_063813769.1 NM_001205569.3 XM_019925131.2 XM_049715204.1 XM_032401732.1 XM_038439870.1 XM_023760067.1 XM_023544567.1 XM_004382567.2 \
---report product --as-json-lines > foxp2_orthologs.jsonl
+**1. By gene name**    
+We are going to use the command below to get every record of FOXP2 for humans and other mammals.
+Note how the command is built:
+
+- First, we say we want the summary - which is a data report - and we specify FOXP2 as our target gene with `gene symbol`
+- Then, we pass 4 options into the command:
+    - `taxon`: the species we want as our reference. 9606 is human (it's safer to use numbers rather than names here)
+    - `ortholog`: the group for which we will download FOXP2 orthologs (same gene for different species), based on our reference species. 40674 is Mammals
+    - `report product`: the type of report we want. In this case, we want the product, which contains the transcript information we need.
+    - `as-json-lines`: the format we want our report in (has to be json because of the next command)
+
+
+```sh
+datasets summary gene symbol FOXP2 \
+    --taxon 9606 \
+    --ortholog 40674 \
+    --report product \
+    --as-json-lines
+```
+
+
+**2. By accession number**  
+In this case, our input will be the accession numbers of the 10 sequences listed earlier. 
+```sh
+    datasets summary gene accession \
+    NM_014491.4 XM_063813769.1 NM_001205569.3 XM_019925131.2 XM_049715204.1 XM_032401732.1 XM_038439870.1 XM_023760067.1 XM_023544567.1 XM_004382567.2 \
+    --report product --as-json-lines > foxp2_orthologs.jsonl
 ```
 
 !!! note "What is metadata?"
@@ -126,7 +161,7 @@ NM_014491.4 XM_063813769.1 NM_001205569.3 XM_019925131.2 XM_049715204.1 XM_03240
 
     ![Celebratory cat 1](https://i.pinimg.com/originals/61/79/3d/61793d8588130c2ea05abb955326c5d3.gif){ width="200" }
 
-**🐞 Extracting information about sequence length**
+#### **🐞 Extracting information about sequence length**
 
 We will use the `dataformat` command to extract the [Gene Product Report](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/reference-docs/data-reports/gene-product/) from our JSON Lines file and convert it into a readable table in TSV format.
 This report contains information about FOXP2 transcripts and proteins.
@@ -170,7 +205,7 @@ NCBI GeneID	Taxonomic Name	Symbol	Transcript Accession	Transcript Length	Transcr
 
     ![Celebratory cat 2](https://i.pinimg.com/originals/e1/c6/82/e1c6829221cf788ca7384af54b9b94ee.gif){ width="300" }
 
-**🐞 Making a list of the longest sequences**
+#### **🐞 Making a list of the longest sequences**
 
 Now we will use a Bash script to locate the longest FOXP2 transcript and corresponding protein for each species and save their accession numbers in a list. The accession numbers will let us identify these sequences and download them later.
 
@@ -247,7 +282,7 @@ NP_683696.2
 
     ![Celebratory cat 3](https://i.pinimg.com/originals/40/45/1e/40451ec95d906f7c739cf21038dca0b6.gif){ width="300" }
 
-**🐞 Downloading the longest sequences**
+#### **🐞 Downloading the longest sequences**
 
 Finally, it's time to download the selected transcripts (your data set)!
 We will use the `datasets download` command to download the sequences from NCBI.
