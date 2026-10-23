@@ -1,3 +1,5 @@
+# Tutorial 3 - Downloading genomic sequences
+
 ## 1. What do genomic sequences look like on my computer?
 
 A genomic sequence is any sequence that has been extracted from a genome.

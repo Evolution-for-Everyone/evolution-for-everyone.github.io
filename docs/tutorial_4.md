@@ -1,3 +1,5 @@
+# Tutorial 4 - Building sequence alignments
+
 ## 1. Why align sequences?
 
 Once we have extracted the gene sequences from NCBI, we need to align them.

@@ -1,3 +1,5 @@
+# Tutorial 1 - Introduction to command line and bash
+
 ## 1. Opening the terminal
 
 🍄 **What is the terminal?**

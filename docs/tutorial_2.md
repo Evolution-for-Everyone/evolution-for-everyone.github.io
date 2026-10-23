@@ -1,3 +1,5 @@
+# Tutorial 2 - Working on a server
+
 ## 1. Server? What is that?
 
 If you are in a bioinformatics lab, you will probably have to work on a server at some point. When I first joined a lab as an undergraduate, _server_ was this ethereal, mysterious word for a parallel universe I could access from my computer to run analyses. Back then, I had so many unanswered questions:
