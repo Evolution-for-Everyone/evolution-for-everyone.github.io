@@ -13,6 +13,8 @@ theme:
     - Tutorial 2 Working on a server: tutorial_2.md
     - Tutorial 3 Downloading genomic sequences: tutorial_3.md
     - Tutorial 4 Building sequence alignments: tutorial_4.md
+    - Tutorial 5 Phylogenetic trees: tutorial_5.md
+    - Tutorial 6 Codon models: tutorial_6.md
 
   features:
     - navigation.instant
