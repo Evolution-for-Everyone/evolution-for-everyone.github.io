@@ -1,111 +1,109 @@
 ## 1. What do genomic sequences look like on my computer?
 
-A genomic sequence is any sequence that has been extracted from a genome. <br>
-🐞 It could be a gene, a protein or a non-coding element (like a regulatory region).
+A genomic sequence is any sequence that has been extracted from a genome.
+🐞 It could be a gene, a protein, or a non-coding element (like a regulatory region).
 
-These DNA sequences are often saved as a text file that can have multiple formats - the most common format for evolutionary analyses is **FASTA**.
+These sequences are often saved as text files in different formats. One of the most common formats for evolutionary analyses is **FASTA**.
 
+!!! important "FASTA format"
+    A FASTA file is made up of two elements:
 
-> [!IMPORTANT]  
-> A FASTA file is made up of two elements:
-> * header: a line at the beginning of the sequence that tells you information about it. The header is formed by the symbol `>` followed by a line of text.
-> * sequence: the actual sequence of nucleotides or amino acids that make up that gene, protein, or non-coding element. The sequence starts on the line immediately below, and usually there's a line break every 60-80 characters. 
+    * **Header:** A line at the beginning of a sequence that tells you about it. The header starts with `>` followed by descriptive text.
+    * **Sequence:** The nucleotides or amino acids that make up the gene, protein, or non-coding element. The sequence starts on the line immediately below the header and is usually wrapped every 60–80 characters.
 
-> ```
-> >XM_019925131.2:314-2584 PREDICTED: Tursiops truncatus forkhead box P2 (FOXP2), mRNA`
-> ATGATGCAGGAATCTGCGACAGAGACAATAAGCAACAGTTCAATGAATCAAAATGGAATGAGCACTCTAA`
-> GCAGCCAATTAGATGCTGGCAGCAGAGATGGAAGATCAAGTGGTGACACCAGCTCTGAAGTAAGCACAGT`
-> ```
->
+    ```text
+    >XM_019925131.2:314-2584 PREDICTED: Tursiops truncatus forkhead box P2 (FOXP2), mRNA
+    ATGATGCAGGAATCTGCGACAGAGACAATAAGCAACAGTTCAATGAATCAAAATGGAATGAGCACTCTAA
+    GCAGCCAATTAGATGCTGGCAGCAGAGATGGAAGATCAAGTGGTGACACCAGCTCTGAAGTAAGCACAGT
+    ```
 
 ## 2. Downloading genomic sequences
 
-In our tutorials, we will analyze the coding sequences of the **FOXP2 gene**. 
-* Our goal is to investigate how FOXP2 evolved in mammals that are capable of vocal learning (like us!). 
-* For that, first we need to obtain **our data set**: a collection of FOXP2 sequences for different mammal species. 
+In our tutorials, we will analyze the coding sequences of the **FOXP2 gene**.
+
+* Our goal is to investigate how FOXP2 evolved in mammals that are capable of vocal learning (like us!).
+* First, we need to obtain **our data set**: a collection of FOXP2 sequences for different mammal species.
 * We will download these sequences from **[NCBI](https://www.ncbi.nlm.nih.gov/)**, one of the most widely used genomic databases.
 
-🐞 To download our FOXP2 sequences, we need to know the **names of the species** and the **accession numbers** of each sequence. Accession numbers are how NCBI keeps track of each sequence in their database, each individual sequence has one. \
+🐞 To download our FOXP2 sequences, we need to know the **species names** and **accession numbers**. Accession numbers are unique identifiers that NCBI assigns to individual sequences.
+
 Our data set will include the following 10 species:
+
 * Human (_Homo sapiens_) | NM_014491.4
 * Chimpanzee (_Pan troglodytes_) | XM_063813769.1
 * Cow (_Bos taurus_) | NM_001205569.3
 * Bottlenose dolphin (_Tursiops truncatus_) | XM_019925131.2
 * Killer whale (_Orcinus orca_) | XM_049715204.1
-* Harbor Seal (_Phoca vitulina_) | XM_032401732.1
+* Harbor seal (_Phoca vitulina_) | XM_032401732.1
 * Dog (_Canis lupus familiaris_) | XM_038439870.1
 * Little brown bat (_Myotis lucifugus_) | XM_023760067.1
 * African elephant (_Loxodonta africana_) | XM_023544567.1
 * Manatee (_Trichechus manatus latirostris_) | XM_004382567.2
 
-> [!IMPORTANT] 
-> Ok, so how do we download these sequences from NCBI into our computer, so we can work with them? <br> 
-> There are two main ways: 
-> * using a graphic interface on their website or 
-> * the command-line prompt on your terminal. 
+!!! important "How can I download the sequences?"
+    There are two main ways to download these sequences from NCBI:
 
-We will start nice and easy, with the graphic interface. <br>
-Then, we will learn about the command-line version, which is **essential** if you are interested in working with coding sequences.
+    * Use the graphical interface on the NCBI website.
+    * Use the command line in your terminal.
+
+We will start with the graphical interface. Then, we will learn about the command-line version, which is **essential** if you are interested in working with coding sequences.
 
 ### 🍄 Downloading sequences from NCBI Nucleotide
-1. Go to NCBI 
-2. Search for the gene name, `FOXP2`
-[**Orthologs**](https://www.ncbi.nlm.nih.gov/datasets/gene/3077/#orthologs) visualizing tool (it's way easier to search!)
-<img src="https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/91b11fcc-f0e5-454f-961b-c78467fcb74b" width="800">
- 
-4. Use the option **Search the Taxonomy Tree** to filter for the group you are interested in (in this case, Placental mammals should work).
-* select the species you want to download by clicking on the empty white box beside their names. <br>
-* click on `Download > RefSeq Transcripts (FASTA) > One sequence per gene` to get a FASTA file containing all your sequences of interest.
 
-<img src="https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/2e40e2e8-dc9f-487e-85fa-eeebedd158c6" width="800">
+1. Go to [NCBI](https://www.ncbi.nlm.nih.gov/).
+2. Search for the gene `FOXP2`, then open the [Orthologs visualization tool](https://www.ncbi.nlm.nih.gov/datasets/gene/3077/#orthologs).
 
-5. Your downloaded sequence file should have a name like: `FOXP2_refseq_transcript.fasta`. Save it in the `tutorial_3` folder on your computer. 
+   ![NCBI FOXP2 orthologs visualization tool](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/91b11fcc-f0e5-454f-961b-c78467fcb74b){ width="800" }
 
----
+3. Use **Search the Taxonomy Tree** to filter for the group you are interested in. In this example, placental mammals should work.
+4. Select the species you want to download by clicking the empty box beside each name.
+5. Select **Download > RefSeq Transcripts (FASTA) > One sequence per gene** to get a FASTA file containing your sequences of interest.
+
+   ![Selecting RefSeq transcripts for download](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/2e40e2e8-dc9f-487e-85fa-eeebedd158c6){ width="800" }
+
+6. Save the downloaded file (for example, `FOXP2_refseq_transcript.fasta`) in the `tutorial_3` folder on your computer.
+
 ### 🍄 Pause for a deep breath
 
-Brace yourself: take a deep breath, because things will get a little more complicated - but it's nothing you can't master with practice!
+Brace yourself and take a deep breath. Things will get a little more complicated, but it's nothing you can't master with practice!
 
-<img src="https://github.com/user-attachments/assets/7f2c1553-314d-478b-9b30-3ff36d9df453" width="300">
-
----
+![Take a deep breath](https://github.com/user-attachments/assets/7f2c1553-314d-478b-9b30-3ff36d9df453){ width="300" }
 
 ### 🍄 Downloading sequences using command-line
 
-We will now learn how to download genomic sequences using command-line. <br>
-This is currently the best way to download a set of **coding sequences**, which you can analyze in codon models such as **codeml**.
+We will now learn how to download genomic sequences using the command line.
+This is a useful way to download a set of **coding sequences**, which you can analyze with codon models such as **codeml**.
 
 This part of the tutorial was adapted from NCBI's own tutorial: [Get one protein per gene from a set of orthologs](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/tutorials/ortholog-get-one-isoform/). Feel free to check it out for more details!
 
-⒈ Access our lab server, Awarnach (for a reminder, please check [Tutorial 2](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-2:-Working-on-a-server))
+1. Access our lab server, Awarnach. For a reminder, see [Tutorial 2](tutorial_2.md).
 
-⒉ Activate the environment where `ncbi_datasets` is installed by running:
-```bash
-source activate ncbi_datasets
-```
-⒊ Navigate to your `tutorial_3` folder using `cd` followed by the pathway to the folder:
-```bash
-cd tutorials_2025/tutorial_3/
-```
-> [!NOTE]
-> **Pause to explain the next steps** <br>
-> * Because many genes undergo alternative splicing, they have multiple transcript variants (mRNA isoforms). 
-> * They all come from the same gene, but their coding sequences and sizes can be different.
-> * In most comparative genomic studies, we only need one sequence per gene - so it's our job to "choose" the most representative transcript to include in our data set.
-> * The overall convention is to select the longest transcript, which will most likely contain the entire coding sequence of that gene.
+2. Activate the environment where `ncbi_datasets` is installed:
 
-⒋ We will now **download only the longest transcript** of FOXP2 for each species! <br>
-For each step below, just copy and paste the commands on your terminal, then hit Enter (_but make sure to read and understand what they are doing_).
+   ```sh
+   source activate ncbi_datasets
+   ```
 
-🐛 This part can be challenging for beginners, so every step you complete you will unlock a celebratory cat GIF. \
-**YOU GOT THIS!!**
+3. Navigate to your `tutorial_3` folder using `cd` followed by the path to the folder:
 
-<img src="https://github.com/user-attachments/assets/a5450877-37d5-4e5c-ace8-7ca774857788" width="300">
+   ```sh
+   cd tutorials_2025/tutorial_3/
+   ```
 
-**🐞 Getting FOXP2 metadata** \
-We will enter the `datasets summary` command to recover metadata about the FOXP2 sequences we are interested in. \
-As input, will use the accession numbers of our 10 sequences (from the beginning of the tutorial). \
-This command prints out a data report in the json-lines format: `foxp2_orthologs.jsonl`.
+!!! note "Why choose one transcript per gene?"
+    Many genes undergo alternative splicing and have multiple transcript variants (mRNA isoforms). These transcripts come from the same gene, but their coding sequences and lengths can differ.
+
+    Many comparative genomic studies use one sequence per gene. A common approach is to select the longest transcript, although the longest transcript is not necessarily the best representative of the complete coding sequence in every case.
+
+4. We will now download a representative FOXP2 transcript for each species. For the steps below, copy and paste the commands into your terminal and press Enter. Read each command to understand what it does.
+
+🐛 This part can be challenging for beginners, so each completed step unlocks a celebratory cat GIF. **You got this!**
+
+![You can do it](https://github.com/user-attachments/assets/a5450877-37d5-4e5c-ace8-7ca774857788){ width="300" }
+
+**🐞 Getting FOXP2 metadata**
+
+We will use the `datasets summary` command to retrieve metadata about our FOXP2 sequences. As input, we will use the accession numbers of the 10 sequences listed earlier. This command writes a data report in JSON Lines format to `foxp2_orthologs.jsonl`.
 
 ```bash
 datasets summary gene accession \
@@ -113,26 +111,24 @@ NM_014491.4 XM_063813769.1 NM_001205569.3 XM_019925131.2 XM_049715204.1 XM_03240
 --report product --as-json-lines > foxp2_orthologs.jsonl
 ```
 
->[!NOTE]
-> Metadata is anything that provides context or information about the data itself. In the case of NCBI sequences, the metadata includes:
-> * common gene name 
-> * gene ID (an identifier unique to each gene)
-> * name of the species/taxon
-> * sequence accession number
-> * sequence length
+!!! note "What is metadata?"
+    Metadata is information that provides context about the data. For NCBI sequences, it can include:
 
-<details>
+    * Common gene name
+    * Gene ID (an identifier unique to each gene)
+    * Species or taxon name
+    * Sequence accession number
+    * Sequence length
 
-<summary>WELL DONE! Click to unlock celebratory cat #1</summary>
+??? success "Well done! Click to unlock celebratory cat #1"
 
-<img src="https://i.pinimg.com/originals/61/79/3d/61793d8588130c2ea05abb955326c5d3.gif" width="200">
+    ![Celebratory cat 1](https://i.pinimg.com/originals/61/79/3d/61793d8588130c2ea05abb955326c5d3.gif){ width="200" }
 
-</details>
+**🐞 Extracting information about sequence length**
 
-**🐞 Extracting information about sequence length** \
-We will use the `dataformat` command to extract the [Gene Product Report](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/reference-docs/data-reports/gene-product/) from our jsonl file, and convert it into a readable table in the `tsv` format. \
-We want the Gene Product Report because it contains information about FOXP2's transcripts and proteins. \
-Note that the `--fields` option is specifying the information we want to include in our table, such as gene id, symbol, transcript length etc.
+We will use the `dataformat` command to extract the [Gene Product Report](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/reference-docs/data-reports/gene-product/) from our JSON Lines file and convert it into a readable table in TSV format.
+This report contains information about FOXP2 transcripts and proteins.
+The `--fields` option specifies which information to include in the table, such as gene ID, symbol, and transcript length.
 
 ```bash
 dataformat tsv gene-product \
@@ -140,15 +136,16 @@ dataformat tsv gene-product \
 --fields gene-id,tax-name,symbol,transcript-accession,transcript-length,transcript-protein-accession,transcript-protein-length > transcript_protein.tsv
 ```
 
-Let's take a look at this table! For that, we will use the command `head`, which displays the first 10 lines of a file. It's very useful for taking a quick look at long files. 
+Let's take a look at this table using `head`, which displays the first 10 lines of a file. It's useful for taking a quick look at long files.
 
 ```bash
 head transcript_protein.tsv
 ```
 
 The beginning of your table should look like this:
-```bash
-NCBI GeneID	Taxonomic Name	Symbol	Transcript Accession	Transcript Transcript Length	Transcript Protein Accession	Transcript Protein Length
+
+```text
+NCBI GeneID	Taxonomic Name	Symbol	Transcript Accession	Transcript Length	Transcript Protein Accession	Transcript Protein Length
 93986	Homo sapiens	FOXP2	NR_033766.2	6355		
 93986	Homo sapiens	FOXP2	NR_033767.2	6601		
 93986	Homo sapiens	FOXP2	NM_148898.4	6618	NP_683696.2	740
@@ -159,31 +156,30 @@ NCBI GeneID	Taxonomic Name	Symbol	Transcript Accession	Transcript Transcript Len
 93986	Homo sapiens	FOXP2	NM_148899.3	1410	NP_683697.2	432
 449627	Pan troglodytes	FOXP2	XM_063813769.1	4716	XP_063669839.1	764
 ```
+
 📍 Let's break down this table:
-* The first line of contains the column headers: NCBI GeneID, Taxonomic Name, Symbol, Transcript Accession, Transcript Transcript Length, Transcript Protein Accession, Transcript Protein Length
-* The columns are separated by a `tab`, so we have 7 columns
-* The first column contains the GeneID, the second has the taxon name, the third has the gene name (referred to as "symbol"), and so on.
-  * can you find which column has the accession numbers of the transcripts? What about protein length?
 
-<details>
+* The first line contains the column headers: gene ID, taxonomic name, symbol, transcript accession, transcript length, protein accession, and protein length.
+* The columns are separated by tabs, so the table has seven columns.
+* The first column contains the gene ID, the second the taxon name, and the third the gene name (the "symbol").
+* Can you find the column with transcript accession numbers? What about protein length?
 
-<summary>GREAT WORK! Click to unlock celebratory cat #2</summary>
+??? success "Great work! Click to unlock celebratory cat #2"
 
-<img src="https://i.pinimg.com/originals/e1/c6/82/e1c6829221cf788ca7384af54b9b94ee.gif" width="300">
+    ![Celebratory cat 2](https://i.pinimg.com/originals/e1/c6/82/e1c6829221cf788ca7384af54b9b94ee.gif){ width="300" }
 
-</details>
+**🐞 Making a list of the longest sequences**
 
-**🐞 Making a list of the longest sequences** \
-Now we will use a bash script to locate the longest FOXP2 transcripts and proteins of each species and save their accession numbers into a list. The accession numbers will allow us to identify these sequences and download them later. 
+Now we will use a Bash script to locate the longest FOXP2 transcript and corresponding protein for each species and save their accession numbers in a list. The accession numbers will let us identify these sequences and download them later.
 
-📍Since this is a large script, it's safer to save it as a file, then run it. Create a new file by entering:
+📍 Since this is a large script, it's safer to save it as a file and then run it. Create a new file:
 
 ```bash
 nano list_longest.sh
 ```
 
-Once your text editor is open, copy the script below and paste it on the terminal screen using `Ctrl+V`. \
-PS: don't get scared! Above each line of the script, you will find a comment starting with `#` explaining what it does.
+Once your text editor is open, copy the script below and paste it into the editor using `Ctrl+V`.
+Don't be scared! The comments starting with `#` explain what each part of the script does.
 
 ```bash
 # Removes the first line (header) from the file and passes the rest to the next command
@@ -210,18 +206,19 @@ while read GENE_IDS; do
         printf "$LONGEST\n" >> longest.list;
 
 done
-````
+```
 
-Now, we can run the script by entering `bash list_longest.sh`. This command tells the terminal to interpret our script file using the bash language.
+Now run the script by entering `bash list_longest.sh`. This tells the terminal to interpret the file using Bash.
 
-📍 After running successfully, your script should have created a file named `longest.list`. Let's take a look at it!
+📍 After it runs successfully, your script should have created a file named `longest.list`. Let's take a look:
+
 ```bash
 cat longest.list
 ```
 
 You should see on your screen the accession numbers of the longest transcripts and proteins, like this:
 
-```bash
+```text
 XM_023544567.1
 XP_023400335.1
 XM_049715208.1
@@ -244,17 +241,14 @@ NM_148898.4
 NP_683696.2
 ```
 
-<details>
+??? success "Almost there! Click to unlock celebratory cat #3"
 
-<summary>ALMOST THERE! Click to unlock celebratory cat #3</summary>
+    ![Celebratory cat 3](https://i.pinimg.com/originals/40/45/1e/40451ec95d906f7c739cf21038dca0b6.gif){ width="300" }
 
-<img src="https://i.pinimg.com/originals/40/45/1e/40451ec95d906f7c739cf21038dca0b6.gif" width="300">
+**🐞 Downloading the longest sequences**
 
-</details>
-
-**🐞 Downloading the longest sequences**\
-Finally, it's time to download the longest transcripts (AKA your data set)! <br>
-We will use the `datasets download` command to download our list of longest transcripts from the NCBI database. <br>
+Finally, it's time to download the selected transcripts (your data set)!
+We will use the `datasets download` command to download the sequences from NCBI.
 
 ```bash
 datasets download gene accession \
@@ -264,61 +258,77 @@ datasets download gene accession \
 --filename longest.zip
 ```
 
-After running this command, you will see some updates on your screen:
-```bash
+After running this command, you should see output similar to this:
+
+```text
 Collecting 10 gene records [================================================] 100% 10/10
 Downloading: longest.zip    33.5kB valid zip structure -- files not checked
 Validating package [================================================] 100% 7/7
 ```
-If you see the bar get to 100%, it means that the download was successful! The results will come out as a zip file called `longest.zip`. 
+If the progress bar reaches 100%, the download was successful. The result is a ZIP file called `longest.zip`.
 
-📍 Now it's time to look at our downloaded sequences! For that, let's unzip the `longest.zip file`:
+📍 Now let's look at the downloaded sequences by unzipping `longest.zip`:
+
 ```bash
 unzip longest.zip
 ```
-After entering the command, you will get this message:
-```bash
+
+After entering the command, you should see output similar to this:
+
+```text
 Archive:  longest.zip
-  inflating: README.md               
-  inflating: ncbi_dataset/data/rna.fna  
-  inflating: ncbi_dataset/data/cds.fna  
-  inflating: ncbi_dataset/data/protein.faa  
-  inflating: ncbi_dataset/data/data_report.jsonl  
-  inflating: ncbi_dataset/data/dataset_catalog.json  
-  inflating: md5sum.txt 
+  inflating: README.md
+  inflating: ncbi_dataset/data/rna.fna
+  inflating: ncbi_dataset/data/cds.fna
+  inflating: ncbi_dataset/data/protein.faa
+  inflating: ncbi_dataset/data/data_report.jsonl
+  inflating: ncbi_dataset/data/dataset_catalog.json
+  inflating: md5sum.txt
 ```
-Now, if you list (`ls`) what's inside your current folder, you will notice a new folder called `ncbi_dataset`. Let's see what's inside it:
+
+Now, if you list (`ls`) what's inside your current folder, you will notice a new folder called `ncbi_dataset`. Let's see what's inside:
+
 ```bash
 ls ncbi_dataset
 ```
-Inside `ncbi_dataset` there's a folder called `data`. To find out what's inside `data`, we can use the same `ls` command, followed by the pathway to `data`:
+
+Inside `ncbi_dataset` there's a folder called `data`. To see what's inside `data`, use `ls` again, followed by the path to `data`:
+
 ```bash
 ls ncbi_dataset/data
 ```
+
 You should see the following files: `cds.fna  data_report.jsonl  dataset_catalog.json  protein.faa  rna.fna`
 
-<img src="https://i.pinimg.com/originals/20/ee/a8/20eea82d92e4b972c25d8b55455aa921.gif" width="400"> 
+![Celebration GIF](https://i.pinimg.com/originals/20/ee/a8/20eea82d92e4b972c25d8b55455aa921.gif){ width="400" }
 
-**🌺 And there's our data!!** \
+**🌺 And there's our data!**
+
 The sequence data of the FOXP2 gene is contained in 3 files:
-* `rna.fna` contains all the longest transcripts
-* `protein.faa` file contains the longest corresponding proteins
-* `cds.fna` (which will be super important in the next tutorials) contains the same sequences, but only the coding portion (so no regulatory/flanking sequences)! 
 
-Using `head`, take a look at the first lines of these 3 files. \
-**But watch out!** Right now, you re inside `tutorial_3`, and your files are in `ncbi_dataset/data`. Now there's two ways you can do the command correctly:
-* Navigate to `data`, and then use `head`:
-```bash
-cd ncbi_dataset/data
-head rna.fna
-```
-* Use the `head` command from your current folder, passing the pathway to the input files:
-```bash
-head ncbi_dataset/data/rna.fna
-```
-You can choose what way you prefer! Do this for all 3 files. \
-After entering the command, the first lines of your `rna.fna` file should be:
-```bash
+* `rna.fna` contains the selected transcripts.
+* `protein.faa` contains the corresponding protein sequences.
+* `cds.fna` (which will be important in the next tutorials) contains the coding sequences.
+
+Using `head`, take a look at the first lines of these three files.
+**But watch out!** You are inside `tutorial_3`, and the files are in `ncbi_dataset/data`. There are two ways to run the command:
+
+* Navigate to `data`, then use `head`:
+
+  ```sh
+  cd ncbi_dataset/data
+  head rna.fna
+  ```
+
+* Run `head` from your current directory and provide the path to the input file:
+
+  ```sh
+  head ncbi_dataset/data/rna.fna
+  ```
+
+Choose whichever way you prefer, and do this for all three files. The first lines of `rna.fna` should look like this:
+
+```text
 >XM_015469121.3 FOXP2 [organism=Bos taurus] [GeneID=505502] [transcript=X1]
 GGACCTGGCAGAGTCCCCACGGACGAGAGCGGGACTCGGGCGCTGGAGGCTGGGCCCGCGCACTCCCCAC
 GCCGGCGTCTCGGCTTTGAAGTGCGAGCGGCAGTTCTGGCAGTTTCTTCTTTCCTTTCATTCCGGTTACT
@@ -330,8 +340,9 @@ CGCTTGGGTCTCCCTTTCTGACTCTCGAGTACTTTAACTCCTTGCCACCGAGGGCTTTGGATCCCTTCGA
 GGCTTCCTGCACTTCACTTGGAATTCCCTGTTTCATTTGCCAGCAGCTCCGTCTGCTGAGAGGACGTACT
 TTAGGGACTGCCAAGAAGCAGCAGACACAACTCAGCTTTGCCAATACAGCATAAGGTTTTGTTCTCTCCT
 ```
-and the first lines of your `protein.fna` file:
-```bash
+The first lines of `protein.faa` should look like this:
+
+```text
 >XP_015324607.1 FOXP2 [organism=Bos taurus] [GeneID=505502] [isoform=X1]
 MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT
 SGLKSPKSSDKQRPLQELLPETKLCVCGHSSGDGHPHNTFAVPVSVAMMTPQVITPQQMQQILQQQVLSP
@@ -343,8 +354,9 @@ LEIQLSKERERLQAMMTHLHMRPSEPKPSPKPLNLVSSVTMSKNMLETSPQSLPQTPTTPTAPVTPITQG
 PSVITPASVPNVGAIRRRHSDKYNIPMSSEIAPNYEFYKNADVRPPFTYATLIRQAIMESSDRQLTLNEI
 YSWFTRTFAYFRRNAATWKNAVRHNLSLHKCFVRVENVKGAVWTVDEVEYQKRRSQKITGSPTLVKNIPT
 ```
-and here are the first lines of the `cds.fna` file:
-```bash
+The first lines of `cds.fna` should look like this:
+
+```text
 ATGATGCAGGAATCTGCGACAGAGACAATAAGCAACAGTTCAATGAATCAAAATGGAATGAGCACTCTAA
 GCAGCCAATTAGATGCTGGCAGCAGAGATGGAAGATCAAGTGGTGACACCAGCTCGGAAGTAAGCACAGT
 AGAACTGCTGCATCTGCAACAACAGCAGGCTCTCCAAGCAGCGAGACAACTTCTCTTACAGCAGCAAACA
@@ -356,17 +368,19 @@ AACAACTACAAGAGTTTTACAAGAAACAGCAAGAGCAGTTACATCTTCAGCTTTTGCAGCAGCAGCAACA
 GCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCAGCAGCAGCAGCAGCAGCAGCAACAGCAGCAGCAGCCC
 ```
 
-**Do these sequences remind you of the `fasta` format we talked about in the beginning?** \
-Well, there you go! You have just downloaded your first genomic sequences in `fasta` format 🌺
+**Do these sequences remind you of the `fasta` format we talked about at the beginning?**
 
-**Do you notice any differences between these 3 sequences?How are they different?**
+Well, there you go! You have just downloaded your first genomic sequences in `fasta` format. 🌺
+
+**Do you notice any differences between these three sequences? How are they different?**
 
 ## 3. Preparing sequences for analysis
 
 ### 🍄 Editing the headers of a fasta file
 
-```bash
+The FASTA headers contain several fields. This command creates shorter headers from the gene name, organism, and transcript information, while leaving the sequence lines unchanged. It writes the result to `cds_headers.fna`.
 
+```sh
 awk -F' ' '
 /^>/ {
     gene = $2                          # Extract second field (FOXP2)

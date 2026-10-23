@@ -9,9 +9,10 @@ theme:
   - Home: index.md
   - About: about.md
   - Tutorials:
-    - Tutorial 1 - Introduction to command line and bash: tutorial_1.md
-    - Tutorial 2 - Working on a server: tutorial_2.md
-    - Tutorial 3 - Downloading genomic sequences: tutorial_3.md
+    - Tutorial 1 Introduction to command line and bash: tutorial_1.md
+    - Tutorial 2 Working on a server: tutorial_2.md
+    - Tutorial 3 Downloading genomic sequences: tutorial_3.md
+    - Tutorial 4 Building sequence alignments: tutorial_4.md
 
   features:
     - navigation.instant

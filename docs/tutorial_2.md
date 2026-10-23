@@ -1,8 +1,8 @@
 ## 1. Server? What is that?
 
-If you are in a bioinformatics lab, you will probably have to work on a server at some point. When I first joined a lab back in my undergrad years, _server_ was this ethereal, mysterious word to describe a parallel universe that I could access from my computer to run some analysis. Back then, I had so many unanswered questions:
+If you are in a bioinformatics lab, you will probably have to work on a server at some point. When I first joined a lab as an undergraduate, _server_ was this ethereal, mysterious word for a parallel universe I could access from my computer to run analyses. Back then, I had so many unanswered questions:
 
-* What is a server? 
+* What is a server?
 * How does it look like?
 * What is it made of?
 * Where does it stay?
@@ -11,180 +11,184 @@ If you are in a bioinformatics lab, you will probably have to work on a server a
 Let's start this tutorial by answering those questions:
 
 ### 🍄 What is a server?
-A server is a supercomputer or a collection of computers working together, sitting in a room somewhere. The reason why we need servers is the same as why we, as humans, get together to solve complex problems - for some kinds of problems, one brain (one computer) is enough, for others, we need a room of people thinking together (server).
 
-A small server can be just a few computers in a research office, but a large server can look like this:    
-_This is the Narval server, located at the [École de technologie supérieure](https://www.etsmtl.ca/en/home) in Montreal._
+A server is a computer, or a collection of computers working together, that provides resources such as processing power, storage, or software. We use servers for the same reason people work together to solve complex problems: one computer may be enough for some tasks, while others need more computing power.
 
-<img src="https://github.com/user-attachments/assets/1c1643d0-97d3-4352-a64a-62d15ed624fe" width="500">
+A small server can be just a few computers in a research office, while a large server can look like this:
+
+![Narval server at the École de technologie supérieure in Montreal](https://github.com/user-attachments/assets/1c1643d0-97d3-4352-a64a-62d15ed624fe){ width="500" }
 
 ### 🍄 What's cool about a server?
-* servers are way larger and more powerful than our personal computers, so they can store more data, process things faster and deal with more complicated problems
-* it allows you to run a lot of different software outside your own laptop, using the combined power of this collection of computers (even heavy analyses that your laptop might not be able to handle!).
-* when you run something on a server (like a code, an analysis or a software) it will keep running even after you shut down your laptop/personal computer!
-* you don't have to worry about installing all the software for your research project and keeping them updated - our server administrator will do that for you!
 
-_**That sounds awesome! How do I enter the magic world of the server?**_ <br>
-Let's learn more about that in the next section ⬇️
+* Servers are often more powerful than personal computers, so they can store more data, process it faster, and handle more complicated problems.
+* You can run software on a server using its computing resources, including analyses that your laptop might not be able to handle.
+* A process running on a server can continue after you disconnect from it, if it was started in a way that keeps it running.
+* A server administrator may install and maintain software for the research group.
+
+_**That sounds awesome! How do I access a server?**_
+
+Let's learn more in the next section.
 
 ## 2. Accessing a server
 
-Our laptops/computers can connect to a server via internet, and for that we just need to use the `ssh` (secure shell) command on our terminal! <br>
-The `ssh` command allows you to log in to any server, as long as you have these 4 pieces of information:
-* server
-* username
-* password
-* port
+Our computers can connect to a server over the internet using the `ssh` (Secure Shell) command in a terminal.
+To connect, you need the server's address and your username. Depending on how the server is configured, you may also need a port number, a password, an SSH key, or multi-factor authentication.
 
-..and using the following command: `ssh -p port username@server` <br>
-After you type that command, the prompt will ask you for a password, as we'll see in the examples below. <br>
+The general command is:
+
+```sh
+ssh -p [port] [username]@[server]
+```
+
+The `-p [port]` part is only needed if the server uses a non-default SSH port. After you enter the command, you may be asked to authenticate.
 
 ### 🍄 The Alliance servers
-The Digital Research Alliance of Canada has a collection of servers available to any researcher affiliated with a Canadian institution:    
-[Beluga](https://docs.alliancecan.ca/wiki/B%c3%a9luga/en), [Cedar](https://docs.alliancecan.ca/wiki/Cedar), [Graham](https://docs.alliancecan.ca/wiki/Graham), [Narval](https://docs.alliancecan.ca/wiki/Narval/en#Node_characteristics) and [Niagara](https://docs.alliancecan.ca/wiki/Niagara)
 
-🐞 **Registering for a server account with the Alliance**    
-To get access to the Alliance's servers, first you need to create an account by [registering](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account) with the Alliance CCDB 
-* if you are a PI, you can apply directly for an account 
-* if you are a student/member of a research group, your supervisor needs have an account first, so they can sponsor your application at no cost.
+The Digital Research Alliance of Canada has a collection of servers available to researchers affiliated with Canadian institutions: [Beluga](https://docs.alliancecan.ca/wiki/B%C3%A9luga/en), [Cedar](https://docs.alliancecan.ca/wiki/Cedar), [Graham](https://docs.alliancecan.ca/wiki/Graham), [Narval](https://docs.alliancecan.ca/wiki/Narval/en#Node_characteristics), and [Niagara](https://docs.alliancecan.ca/wiki/Niagara).
 
-🐞 **Setting up your server account**    
-Once your application has been approved (usually takes 1-2 business days), and before you can use the server, you need to set up:
-1. [Multi-factor Authentication](https://docs.alliancecan.ca/wiki/Multifactor_authentication)
-2. [SSH-keys](https://docs.alliancecan.ca/wiki/SSH_Keys) (recommended) 
-3. and for Niagara, you need to access the [opt-in page](https://ccdb.alliancecan.ca/services/opt_in) and click on the join button. In the future, this step will be required for other servers as well.
+🐞 **Registering for an Alliance server account**
 
-🐞 **Logging into your account**    
-Now, you can use the `ssh` command to log in to your server account! Just type the following command on the terminal:
+To access the Alliance servers, first [register for an account](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account) with the Alliance's CCDB.
 
-```bash
+* If you are a principal investigator (PI), you can apply directly for an account.
+* If you are a student or research-group member, your supervisor must have an account to sponsor your application at no cost.
+
+🐞 **Setting up your server account**
+
+Once your application has been approved (usually within 1–2 business days), follow the setup instructions for:
+
+1. [Multi-factor authentication](https://docs.alliancecan.ca/wiki/Multifactor_authentication)
+2. [SSH keys](https://docs.alliancecan.ca/wiki/SSH_Keys) (recommended)
+3. For Niagara, the [opt-in page](https://ccdb.alliancecan.ca/services/opt_in). Open the page and click the join button. Check the Alliance documentation for current requirements for other servers.
+
+🐞 **Logging in to your account**
+
+Use the login command provided by the Alliance for your selected server. For example:
+
+```
 ssh [username]@[server].alliancecan.ca
 ```
-replacing `[username]` with your username and `[server]` with the name of the server you wish to log in to.
+
+Replace `[username]` and `[server]` with your account and server details. The exact login method may differ depending on the server's authentication requirements.
 
 ### 🍄 The Awarnach server
 
-The Bielawski Group's server is called Awarnach (there's a cool story behind that name, read more [here](https://awarnach.mathstat.dal.ca/dokuwiki/doku.php?id=awarnach:home)). It's a cluster server - which means it's a bunch of computers working together - that stays inside Joe's office, centralizing all the data, information and software for our lab's research projects. 
+The Bielawski Group's server is called Awarnach. [Read the story behind its name](https://awarnach.mathstat.dal.ca/dokuwiki/doku.php?id=awarnach:home). It is a cluster—a group of computers working together—located in Joe's office. It centralizes data, information, and software for the lab's research projects.
 
-To log in on our server, we will:
-1. Open the terminal
-2. Use the `ssh` command replacing the port, user name and server name with the proper information. <br>
-- Our server's name is: `awarnach.mathstat.dal.ca`, the port is `22` and each one of us has our own username. <br>
-Here's how the full command looks like, after I added my own user name `leticiamagpali` (replace that with yours!):
+To log in:
 
-```
+1. Open a terminal.
+2. Run the `ssh` command with the server's address and your username. The server address is `awarnach.mathstat.dal.ca`, the port is `22`, and each user has a unique username.
+
+For example, if your username is `leticiamagpali`, the command is:
+
+```sh
 ssh -p 22 leticiamagpali@awarnach.mathstat.dal.ca
 ```
-📍**Note**: Your username and password are set up by the server's administrator (ask your supervisor to arrange that and get the admin's contact for troubleshooting)
 
-**🍄 Let's practice!** <br>
-Log in to Awarnach using the `ssh` command, and the username and password that were sent to you. <br>
-_When you type in your password, nothing will show on the screen_, so just type the full password one time and hit enter. <br> 
-After successful log in, your screen should look like this: <br>
+📍 **Note:** The server administrator sets up your account. Ask your supervisor how to get access and who to contact for troubleshooting.
 
-![Screenshot 2024-05-23 at 4 58 15 PM](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/7f9e71e6-3c99-416f-a805-90d0b376de62)
+**🍄 Let's practice!**
 
-**Ok, now that I'm logged in, what if I want to exit the server?** <br>
-That's simple! Just type `exit` on the prompt, and hit enter! <br>
-There will be a message to confirm you actually left the server, like this:
+Log in to Awarnach using the `ssh` command and the account details provided to you.
+When you type a password, nothing appears on the screen. Type it once, then press Enter.
+
+After a successful login, your screen should look like this:
+
+![Terminal after logging in to Awarnach](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/7f9e71e6-3c99-416f-a805-90d0b376de62)
+
+**How do I exit the server?**
+
+Type `exit` at the prompt and press Enter. You should see a message confirming that you disconnected:
+
 ```
 logout
 Connection to awarnach.mathstat.dal.ca closed.
 ```
-**What if I want to change my password?** <br>
-You can change your server password at anytime entering the command `passwd` on the terminal prompt. <br>
-It will ask you first to type the current password, then the new one. <br>
 
-> [!WARNING]
->None of these passwords will show when you type them, so make sure to just type one time and press enter!
+**How do I change my password?**
+
+If password changes are enabled on your server, run `passwd` at the terminal prompt. It will ask for your current password and then your new password.
+
+!!! warning
+    Passwords do not appear on the screen while you type them. Enter each password once, then press Enter.
 
 ## 3. Transferring files between the server and your computer
 
-When you are working on server, all the information and files you produce will be stored on the server - not on your personal computer. So anytime you want to look at your results on your computer using your programs, you will need to transfer them from the server first. <br>
-There are two ways of doing that: via command line or using a software with a graphic interface (in our case, **Filezilla**). 
+When you work on a server, the files you create are stored on the server, not on your personal computer. To use those files with programs on your computer, you may need to transfer them first.
 
-Let's look at both of them below:
+You can transfer files using the command line or a graphical application such as **FileZilla**.
 
 ### 🍄 Transferring files via command line
 
-We can use the `scp` command on the terminal to transfer/copy files from the server to our computer and vice-versa. <br>
-For that, follow the steps below:
+Use the `scp` command in a terminal on your computer to copy files between your computer and the server.
 
-1. Open a terminal session _on your computer_
-2. Now let's test the scp command on two different cases: <br> 
-In each case, copy the command and edit it, replacing the place holders with the actual paths in your local and remote. 
+1. Open a terminal on your computer.
+2. Choose the command for the direction you want to copy, replacing the placeholders with the correct paths and account details.
 
-* **Transferring from remote (server) to local (your computer)** 
-```
-scp [username]@[server]:/path/to/remote/file /path/to/local/destination/folder
-```
+**From the server to your computer**
 
-* **Transferring from local (your computer) to remote (server)** 
-```
-scp /path/to/local/file [username]@[server]:/path/to/remote/destination/folder
+```sh
+scp [username]@[server]:/path/to/remote/file /path/to/local/destination/
 ```
 
-> [!TIP]
-> you can use `pwd` at the server and the destination folder to find out the full path!
+**From your computer to the server**
 
-**Transferring from to local (your computer) to remote (server)**
-1. Open a terminal session 
-3. Now go to your destination folder on your computer and use `ls` to check if your file transfer was successful 🌸
-
-### 🍄 Transferring files with Filezilla
-
-Filezilla is a software you can download to your computer, that allows you to manually transfer files from the server to your computer using drag and drop and clickable options. This can be very useful when you have a lot of stuff to transfer and you are not feeling like writing code. <br>
-Let's get started:
-
-1. Download [Filezilla](https://filezilla-project.org/) by clicking on `Quick download links > Download Filezilla Client` 
-2. Open Filezilla on your applications, and type on the top bar: the server's name (host), your username, password, and server port (go back to the [Awarnach](https://github.com/leticiamagpali/vocal-learning-project/wiki/Tutorial-2:-Working-on-a-server#-the-awarnach-server) session of this tutorial to find our server's login info)
-3. Then, click on `Quick connect` and you should see your server's folders show on right side of your screen, like this: 
-
-<img src="https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/99941072-66f3-469a-8924-4e82b29d9fec" width="800">
-
-4. Then, you can just drag and drop files from the left side of your screen (your computer) to the right side (your folders), and navigate through folders on both sides. **SOOO MUCH POWER!!**
-
-## 4. Challenge - transfering your master folder to the server
-Remember the master folder you created on Tutorial 1 (`tutorials`)? Your task now is to transfer a copy of this folder to your server home folder! You can use `scp` or Filezilla, whichever one you prefer! <br>
-You got this!
-
-<details>
-
-<summary>After you try, click here to see a step-by step guide of how I do it.</summary>
-
-- To do scp, I usually have 2 terminal windows open: in one window, I am connected to my personal computer (letixa@eugenio) and on the other window, I am logged into my server account (leticiamagpali@awarnach.mathstat.dal.ca). This makes it easier to copy and paste information from one to the other!
-
-- Now, to copy the tutorials folder from my computer to the server, I need two things:
-    * the path to the folder on my computer
-    * the path to the destination on the server (where I want this folder to be copied to)
-
-* To find the destination path, I will go to my **server window** and navigate to the destination folder I chose:
-```bash
-cd bioinfo4everyone/
-```
-Once I am inside the destination folder, I can find out its path using the pwd command:
-```bash
-leticiamagpali@awarnach:~/bioinfo4everyone$ pwd
-/home/leticiamagpali/bioinfo4everyone 
-```
-The path to my folder is /home/leticiamagpali/bioinfo4everyone, I will select it and copy it with Ctrl+C.
-
-* On my **computer window** I will go to the place where the tutorials folder is located. If you followed Tutorial 1 and created your tutorials folder in the Documents, you should use:
-```
-cd Documents
-```
-In my case, my tutorials folder is inside my Google Drive, so my cd command is a little longer:
-```bash
-cd Google    Drive/My    Drive/evolution4everyone/bioinformatics-for-everyone/solved_tutorials/
-```
-Once you are inside tutorials, you can type the scp command: 
-```bash
-scp /path/to/local/file [username]@[server]:/path/to/remote/destination/folder
-```
-replacing /path/to/local/file with tutorials, [username] and [server] with your login information and /path/to/remote/destination/folder with the path you copied above. So in my case it will look like this:
-
-```bash
-scp tutorials leticiamagpali@awarnach.mathstat.dal.ca:/home/leticiamagpali/bioinfo4everyone
+```sh
+scp /path/to/local/file [username]@[server]:/path/to/remote/destination/
 ```
 
-</details>
+To copy a directory and everything inside it, add the `-r` option after `scp`. For example:
+
+```sh
+scp -r tutorials [username]@[server]:/path/to/remote/destination/
+```
+
+!!! tip
+    Use `pwd` to find the current directory's full path. Run it on the server for a remote path, or in a terminal on your computer for a local path.
+
+### 🍄 Transferring files with FileZilla
+
+FileZilla is an application that lets you transfer files between your computer and a server using a graphical interface. It can be useful when you want to drag and drop files instead of entering commands.
+
+1. Download [FileZilla Client](https://filezilla-project.org/).
+2. Open FileZilla and enter the server host, username, password or other authentication details, and port. For Awarnach's details, see [The Awarnach server](#the-awarnach-server).
+3. Click **Quickconnect**. Your server's folders should appear on the right side of the window.
+
+   ![FileZilla showing local and server folders](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/99941072-66f3-469a-8924-4e82b29d9fec){ width="800" }
+
+4. Drag and drop files from the left side (your computer) to the right side (the server). You can navigate through folders on both sides.
+
+## 4. Challenge: transferring your master folder to the server
+
+Remember the master folder you created in Tutorial 1 (`tutorials`)? Your task is to transfer a copy of it to your home folder on the server. Use `scp` or FileZilla—whichever you prefer!
+
+??? note "After you try, open this step-by-step guide"
+
+    To use `scp`, I usually have two terminal windows open: one for commands on my computer and one connected to the server. This makes it easier to look up and copy paths.
+
+    To copy the `tutorials` folder from my computer to the server, I need:
+
+    * The path to the folder on my computer.
+    * The destination path on the server.
+
+    To find the destination path, go to the chosen folder in the **server terminal** and run `pwd`:
+
+    ```sh
+    cd bioinfo4everyone
+    pwd
+    ```
+
+    In this example, the path is `/home/leticiamagpali/bioinfo4everyone`.
+
+    On your **computer**, navigate to the directory that contains the `tutorials` folder. If you created it in Documents, run:
+
+    ```sh
+    cd ~/Documents
+    ```
+
+    Then copy the folder to the server, replacing the username and destination path with your own:
+
+    ```sh
+    scp -r tutorials [username]@awarnach.mathstat.dal.ca:/home/[username]/bioinfo4everyone/
+    ```
