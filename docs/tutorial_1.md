@@ -1,36 +1,32 @@
-## Learning goals
-* [Opening the terminal](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-1:-Introduction-to-command-line-and-bash#1-opening-the-terminal)
-* [The structure of the terminal](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-1:-Introduction-to-command-line-and-bash#2-the-structure-of-the-terminal)
-* [Using bash in the terminal](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-1:-Introduction-to-command-line-and-bash#3-using-bash-in-the--terminal)
-* [Moving between different directories](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-1:-Introduction-to-command-line-and-bash#-moving-between-different-directories) 
-* [Creating directories and files](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-1:-Introduction-to-command-line-and-bash#-creating-directories-and-files)
-* [Changing and moving files](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-1:-Introduction-to-command-line-and-bash#-changing-and-moving-files)
-* [Challenge: creating a folder structure](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-1:-Introduction-to-command-line-and-bash#4-challenge-creating-a-folder-structure)
-* [Installing software](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Tutorial-1:-Introduction-to-command-line-and-bash#5-installing-software)
-
 ## 1. Opening the terminal
 
-🍄 **What is the terminal?**\
-The terminal is a text-based interface where you communicate with your computer by typing commands. \
-In Linux and MacOS systems, the terminal uses a programming language called **bash**. \
+🍄 **What is the terminal?**
+
+The terminal is a text-based interface where you communicate with your computer by typing commands.
+In Linux and MacOS systems, the terminal uses a programming language called **bash**.
+
 You can use the terminal to do anything you normally do in your computer! (for example, running programs, creating, editing and accessing files and folders.)
 
 > [!TIP]
-> _What's so special about the terminal?_ \
+> _What's so special about the terminal?_
+> 
 > It allows you to run a lot of programs that don't have a graphic interface! 
 
 Many programs we use for analysis in evolutionary biology don't have a _graphic interface_ - that means they don't have an app, a screen or clickable icons, and we have to interact with them using only programming language.  
 
-🍄 **Where do I find the terminal?**\
+🍄 **Where do I find the terminal?**
+
 The terminal looks just like another app on your computer - but it will change slightly depending on the operating system you are on (Linux, MacOS or Windows). Follow the instructions below according to your system:
 
 → **For MacOS/Linux users**
+
 * You can locate the **terminal** in the list of apps (launchpad) of your computer, 
 * or using the search option by pressing the F4 key (which should have an eyeglass 🔍 icon) and then typing `terminal` into the search box. 
 * The terminal icon looks like a black box with a `<` and a `-`, like this:
 <img src="https://github.com/user-attachments/assets/8c8aa650-9fb9-4275-a871-a96ea0fa190a" width="200">
 
 → **For Windows users**
+
 * The Windows native terminal does not work with **bash**, so it's not suitable for our needs. 
 * When working with Windows computers, we need to install the Linux system to get access to the terminal. 
 * For that, follow [this written tutorial](https://learn.microsoft.com/en-us/windows/wsl/install), or this [video tutorial](https://www.youtube.com/watch?v=sUsTQTJFmjs&ab_channel=ProgrammingKnowledge).
@@ -53,7 +49,7 @@ user@computer:directory$ # if you are using Linux/Unix
 
 🍄 **Now let's break down the elements of the prompt:**
 
-1️⃣ `user` and `computer` are the names you set up for yourself and your computer \
+1️⃣ `user` and `computer` are the names you set up for yourself and your computer
 For example, <ins>my user name is letixa and my computer name is eujenio</ins>. You can set them to anything you want! 
     
 2️⃣ `directory` is the folder you are currently in (*computer people use this fancy name directory, which really just means folder*)
@@ -95,7 +91,7 @@ You should see a set of words separated by slashes show up in the next line, lik
 In my case, I am in my home directory, located at `/Users/letixa`. <br>
 
 **🐞 What files are inside my home directory?** _We can use `ls` to find out! <br>_
-Type `ls` in your prompt, then hit Enter \
+Type `ls` in your prompt, then hit Enter 
 The screen will show a bunch of words - these are the names of all folders and files you have inside your home directory. 
     
 ```bash
