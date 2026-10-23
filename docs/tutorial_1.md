@@ -68,8 +68,7 @@ This is to indicate which environment you are in - we will see more details abou
 
 ## 3. Using bash in the terminal
 
-!!! info
-    **List of commands**
+!!! info "**List of commands**"
 
     * `pwd` — Print working directory: shows the directory you are in right now.
     * `cd` — Change directory: moves to a different directory through the path you indicate.
