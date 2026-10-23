@@ -13,6 +13,11 @@ theme:
     - Tutorial 2 - Working on a server: tutorial_2.md
     - Tutorial 3 - Downloading genomic sequences: tutorial_3.md
 
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+
   palette:
     - scheme: slate
       toggle:
@@ -20,10 +25,6 @@ theme:
         name: Dark mode
       primary: purple
       accent: deep purple
-  features:
-    - navigation.instant
-    - navigation.instant.prefetch
-    - navigation.instant.progress
 
     # Light Mode
     - scheme: default
