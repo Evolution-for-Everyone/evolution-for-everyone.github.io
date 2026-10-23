@@ -51,15 +51,16 @@ user@computer:directory$ # if you are using Linux/Unix
 
 1️⃣ `user` and `computer` are the names you set up for yourself and your computer
 For example, <ins>my user name is letixa and my computer name is eujenio</ins>. You can set them to anything you want! 
-    
-2️⃣ `directory` is the folder you are currently in (*computer people use this fancy name directory, which really just means folder*)
+
+2️⃣ `directory` is the folder you are currently in (*computer people use this fancy name directory, which really just means folder*).  
+
 * some operational systems (OS) will only show the name of the directory, while others will show the whole path to that directory.
 * when you open your terminal, the directory will show as `~`. This is a path symbol that represents your **HOME directory**.
 
-3️⃣ `$` or `%` is a prompt symbol, indicating that the terminal is waiting for a command. \
+3️⃣ `$` or `%` is a prompt symbol, indicating that the terminal is waiting for a command.  
 When you see this symbol, it means it's ok to type stuff on the terminal!
     
-_What about the `(base)` that shows on my screenshot?_ \
+_What about the `(base)` that shows on my screenshot?_  
 This is to indicate which environment you are in - we will see more details about that in the future.
 
 
@@ -75,11 +76,11 @@ This is to indicate which environment you are in - we will see more details abou
 > * `nano`: text editor, for creating and editing text files
 > * `cat` Concatenate: displays the contents of a file or files
 > * `mv` Move: move or rename files or directories
+> 
 
-### 🍄 **Moving between different directories**
-
+### 🍄 **Moving between different directories**. 
 **🐞 First, let's find out where we are** (aka our working directory) <br>
-Type `pwd` in your prompt, then hit Enter <br>
+Type `pwd` in your prompt, then hit Enter.  
 You should see a set of words separated by slashes show up in the next line, like in the example below:
     
 ```bash
@@ -114,8 +115,8 @@ For example, I want to go to my Documents directory, which is inside my home dir
    
 Note that the `directory` on your prompt has now changed from `~` to the name of the directory you just entered (in my case, `Documents`). Now you are inside Documents! 
 
-**🐞 What if I want to go to a folder that's inside another folder?** \
-In that case, if you try to just type the name of the folder, the computer won't know where to go.\
+**🐞 What if I want to go to a folder that's inside another folder?**   
+In that case, if you try to just type the name of the folder, the computer won't know where to go.  
 You need to use `cd` along with _the complete path to that folder starting from your current location_, like this:
 
 ```bash
@@ -135,8 +136,11 @@ In this error, the computer is saying "there's nothing called work here". Becaus
 > **And here we get to an important terminal lesson: <br>**
 > A command on the terminal only works if your are running it from the correct location!
 > That basically means that:
-> * if the file or folder targeted by your command is located where you are, you can just type `[command] [space] [name of file/folder]`
+> 
+> * if the file or folder targeted by your command is located where you are, you can just type `[command] [space] [name of file/folder]`.  
+> 
 > * **however**, if your target is in a different location, your command needs to inform the path to that file or folder, so you should type `[command] [space] [path to file/folder]`. We will see many examples of this later!
+> 
 
 ***
 
@@ -155,7 +159,7 @@ Now enter `ls`, to check if the folder was created. You should see it showing up
 (base) letixa@eugenio Documents % ls
 tutorials
 ```
-You may have other folders in there as well - as long as you see the name of the folder you just created, it's all good!\
+You may have other folders in there as well - as long as you see the name of the folder you just created, it's all good!   
 Now go inside our `tutorials` directory by using: 
 
 ```bash
@@ -168,7 +172,7 @@ and list what inside of it using `ls`. You should get an empty line, because the
 (base) letixa@eugenio tutorials % 
 ```
 
-**🐞 Create a README file** \
+**🐞 Create a README file**    
 Next, let's use the command `nano` to create a `README.txt` file inside your master folder:
 
 ```bash
@@ -184,11 +188,11 @@ Now, let's enter `ls` to see what's inside your `tutorials` folder. You should s
 (base) letixa@eugenio tutorials % ls
 README.txt
 ```
-You can come back to re-edit this file at any time, by entering `nano README.txt`, typing new lines below the title and then saving the document. \
+You can come back to re-edit this file at any time, by entering `nano README.txt`, typing new lines below the title and then saving the document.    
 To learn more about the `nano` command and how to use it, check out this [video tutorial](https://www.youtube.com/watch?v=g2PU--TctAM&ab_channel=SavvyNik)!
 
-**🐞 What if I want to see what's written on my file?** \
-To take a look at any text file, we can use the command `cat`, followed by the file name. \
+**🐞 What if I want to see what's written on my file?**    
+To take a look at any text file, we can use the command `cat`, followed by the file name.    
 Type `cat README.txt` on your terminal and hit Enter. The terminal will display the content of your file, like this:
 
 ```bash
@@ -198,17 +202,17 @@ BIOINFORMATICS TUTORIALS
 The only thing written on your file is the title - so that's what the terminal will show!
 
 >[!NOTE]
-> To take this lesson further, try writing the content of your README file! \
+> To take this lesson further, try writing the content of your README file!    
 > For more information on how to write a README file, check this webpage: https://www.makeareadme.com/
 
 ***
 
 ### 🍄 Changing and moving files
 
-_Can I change the name and location of a file?_ \
+_Can I change the name and location of a file?_    
 Yes you can! The `mv` command allows you to do both. Let's check it out:
 
-**🐞 Renaming a file:** \
+**🐞 Renaming a file:**    
 Let's assume you wanted to change the name of your README file to `README_tutorials.txt`, to make it more specific. You can do that by entering `mv` followed by the old name, then the new name, like this:
 
 ```bash
@@ -222,8 +226,8 @@ README_tutorials.txt
 ```
 Looks good!
 
-**🐞 Moving a file:** \
-Let's say you made a mistake and created the `README.txt` file inside `Documents`, instead of `tutorials`. Creating a file in the wrong folder is a very common mistake, so how can we correct it? \
+**🐞 Moving a file:**    
+Let's say you made a mistake and created the `README.txt` file inside `Documents`, instead of `tutorials`. Creating a file in the wrong folder is a very common mistake, so how can we correct it?    
 From inside `Documents`, we can enter mv followed by the file name and the new location, like this:
 ```bash 
 (base) letixa@eugenio Documents % mv README.txt tutorials
