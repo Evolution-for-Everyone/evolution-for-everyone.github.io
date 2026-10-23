@@ -18,14 +18,14 @@ MAFFT is available online and from the command line, and we will learn how to us
 2. Paste your entire sequence file into the text box, or upload it from your computer using **Choose file**.
 3. Select your output formatting options.
 
-   ![MAFFT output formatting options](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/52a2f08b-faf7-437c-886a-34fb99d7f541){ width="800" }
+    ![MAFFT output formatting options](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/52a2f08b-faf7-437c-886a-34fb99d7f541){ width="800" }
 
 4. Select an alignment strategy and any other advanced options.
 
-   * For relatively small data sets (fewer than 200 sequences), E-INS-i, L-INS-i, or G-INS-i may be suitable.
-   * If you are unsure which options to use, the defaults are a reasonable starting point.
+    * For relatively small data sets (fewer than 200 sequences), E-INS-i, L-INS-i, or G-INS-i may be suitable.
+    * If you are unsure which options to use, the defaults are a reasonable starting point.
 
-   ![MAFFT alignment strategy options](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/99adeb94-3f56-4975-a46f-2df638b31f02){ width="1000" }
+    ![MAFFT alignment strategy options](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/99adeb94-3f56-4975-a46f-2df638b31f02){ width="1000" }
 
 5. Select **Submit**.
 6. When the alignment is complete, the results page should have a **FASTA** button near the top. Select it to download the alignment in FASTA format, then save it in your `tutorial_4` folder with a meaningful name, such as `FOXP2_nuc_aligned_mafft.fasta`.
@@ -35,50 +35,50 @@ MAFFT is available online and from the command line, and we will learn how to us
 1. Open a terminal and log in to your server account (Awarnach, Alliance, or another server).
 2. Navigate to your Tutorial 3 folder, then to the subfolder containing your FOXP2 sequences:
 
-   ```sh
-   cd tutorial_3/ncbi_dataset/data/
-   ```
+    ```sh
+    cd tutorial_3/ncbi_dataset/data/
+    ```
 
 3. Copy your sequence files (`cds.fna`, `cds_headers.fna`, `rna.fna`, and `protein.faa`) from the Tutorial 3 folder to the Tutorial 4 folder:
 
-   ```sh
-   cp cds.fna cds_headers.fna protein.faa rna.fna ../../../tutorial_4/
-   ```
+    ```sh
+    cp cds.fna cds_headers.fna protein.faa rna.fna ../../../tutorial_4/
+    ```
 
 4. Navigate to your Tutorial 4 folder and list its contents to check that the files were copied:
 
-   ```sh
-   cd ../../../tutorial_4
-   ls
-   ```
+    ```sh
+    cd ../../../tutorial_4
+    ls
+    ```
 
-You should now see your sequence files in the folder.
+    You should now see your sequence files in the folder.
 
 5. **Awarnach users only:** Activate the conda environment where MAFFT is installed. MAFFT will not be available until you activate it.
 
-   ```sh
-   source activate mafft
-   ```
+    ```sh
+    source activate mafft
+    ```
 
 6. Run MAFFT using a command with this format:
 
-   ```sh
-   mafft [options] input.fasta > output.fasta
-   ```
+    ```sh
+    mafft [options] input.fasta > output.fasta
+    ```
 
-   🐞 **Let's break down the command:**
+    🐞 **Let's break down the command:**
 
-   * `[options]` are the MAFFT settings you can choose. See the [MAFFT manual](https://mafft.cbrc.jp/alignment/software/manual/manual.html) for the full list.
-   * `input.fasta` is the name or path to your unaligned sequence file.
-   * `output.fasta` is the name or path for the output alignment.
+    * `[options]` are the MAFFT settings you can choose. See the [MAFFT manual](https://mafft.cbrc.jp/alignment/software/manual/manual.html) for the full list.
+    * `input.fasta` is the name or path to your unaligned sequence file.
+    * `output.fasta` is the name or path for the output alignment.
 
-   Here's an example command:
+    Here's an example command:
 
-   ```sh
-   mafft --nuc --globalpair --maxiterate 1000 --inputorder cds.fna > FOXP2_nuc_aligned_mafft.fasta
-   ```
+    ```sh
+    mafft --nuc --globalpair --maxiterate 1000 --inputorder cds.fna > FOXP2_nuc_aligned_mafft.fasta
+    ```
 
-   `cds.fna` is the **unaligned** sequence file downloaded from NCBI. `FOXP2_nuc_aligned_mafft.fasta` is an example output name; you can choose another name, but keep the `.fasta` extension.
+    `cds.fna` is the **unaligned** sequence file downloaded from NCBI. `FOXP2_nuc_aligned_mafft.fasta` is an example output name; you can choose another name, but keep the `.fasta` extension.
 
 🐞 **Want to build your own command?**
 
@@ -93,21 +93,21 @@ You should now see your sequence files in the folder.
 1. In your terminal, make sure you are logged in to your lab's server.
 2. Activate the PRANK environment:
 
-   ```sh
-   source activate prank
-   ```
+    ```sh
+    source activate prank
+    ```
 
 3. Run PRANK with a command like this, replacing the input and output names with your own:
 
-   ```sh
-   prank -d=input.fasta -o=output -F
-   ```
+    ```sh
+    prank -d=input.fasta -o=output -F
+    ```
 
-   🐞 **Let's break down this command:**
+    🐞 **Let's break down this command:**
 
-   * `-d` specifies the input data file.
-   * `-o` specifies the output name or path.
-   * `-F` is an option recommended by the manual to avoid ignoring gaps and insertions.
+    * `-d` specifies the input data file.
+    * `-o` specifies the output name or path.
+    * `-F` is an option recommended by the manual to avoid ignoring gaps and insertions.
 
 4. View the resulting alignment in the terminal using `cat` and the output file name.
 

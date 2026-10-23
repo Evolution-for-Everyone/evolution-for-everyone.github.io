@@ -81,24 +81,23 @@ To generate a codon alignment, we will use PRANK to process the **FOXP2 nucleoti
 
 1. Activate the PRANK environment:
 
-   ```sh
-   source activate prank
-   ```
+    ```sh
+    source activate prank
+    ```
 
 2. Run PRANK using this command, replacing the input and output names with your own:
 
-   ```sh
-   prank -d=input.fasta -o=output_name -codon -F
-   ```
+    ```sh
+    prank -d=input.fasta -o=output_name -codon -F
+    ```
 
-   * Replace `input.fasta` with the name or path to your nucleotide alignment.
-   * Replace `output_name` with the name you want for the output file. No extension is needed.
+    Replace `input.fasta` with the name or path to your nucleotide alignment, and replace `output_name` with the name you want for the output file. No extension is needed.
 
-   For example:
+    For example:
 
-   ```sh
-   prank -d=FOXP2_nuc_aligned.fasta -o=FOXP2_codon_aligned -codon -F
-   ```
+    ```sh
+    prank -d=FOXP2_nuc_aligned.fasta -o=FOXP2_codon_aligned -codon -F
+    ```
 
 #### Converting the alignment format
 
@@ -114,15 +113,15 @@ Now that we have a codon alignment, we can use IQ-TREE to generate a codon tree 
 
 1. Activate the IQ-TREE environment:
 
-   ```sh
-   source activate iqtree
-   ```
+    ```sh
+    source activate iqtree
+    ```
 
 2. Run IQ-TREE, replacing the alignment name and output prefix with your own. For the sequence type (`-st`), use `CODON`:
 
-   ```sh
-   iqtree -s sequence_alignment -st CODON -m MFP -pre output_file_prefix -nt AUTO
-   ```
+    ```sh
+    iqtree -s sequence_alignment -st CODON -m MFP -pre output_file_prefix -nt AUTO
+    ```
 
 For more details about running IQ-TREE, see [Tutorial 5](tutorial_5.md).
 
@@ -133,23 +132,23 @@ For more details about running IQ-TREE, see [Tutorial 5](tutorial_5.md).
 
 1. Create a master folder for your codeml analyses. You can name it something other than `codeml` if you prefer:
 
-   ```sh
-   mkdir codeml
-   ```
+    ```sh
+    mkdir codeml
+    ```
 
 2. Create a folder for this codeml run. We will start with model M0:
 
-   ```sh
-   mkdir codeml_M0
-   ```
+    ```sh
+    mkdir codeml_M0
+    ```
 
 3. Find the **codon alignment** and **codon tree** for the FOXP2 gene on your server.
 
 4. Use `mv` to move the alignment and tree files into your `codeml_M0` folder. Replace the placeholders with your file paths:
 
-   ```sh
-   mv path/to/file/to/move path/to/destination
-   ```
+    ```sh
+    mv path/to/file/to/move path/to/destination
+    ```
 
 ### 🍂 Writing the control file
 
@@ -220,12 +219,12 @@ omega = 0.5                             * Initial omega value
 
 1. Activate the PAML environment:
 
-   ```sh
-   source activate paml
-   ```
+    ```sh
+    source activate paml
+    ```
 
 2. Run codeml, replacing `control_file.ctl` with the name of your control file:
 
-   ```sh
-   codeml control_file.ctl
-   ```
+    ```sh
+    codeml control_file.ctl
+    ```

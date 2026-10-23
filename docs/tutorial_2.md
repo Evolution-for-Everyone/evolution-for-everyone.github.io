@@ -155,7 +155,7 @@ FileZilla is an application that lets you transfer files between your computer a
 2. Open FileZilla and enter the server host, username, password or other authentication details, and port. For Awarnach's details, see [The Awarnach server](#the-awarnach-server).
 3. Click **Quickconnect**. Your server's folders should appear on the right side of the window.
 
-   ![FileZilla showing local and server folders](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/99941072-66f3-469a-8924-4e82b29d9fec){ width="800" }
+    ![FileZilla showing local and server folders](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/99941072-66f3-469a-8924-4e82b29d9fec){ width="800" }
 
 4. Drag and drop files from the left side (your computer) to the right side (the server). You can navigate through folders on both sides.
 

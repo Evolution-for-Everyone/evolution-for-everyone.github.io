@@ -53,13 +53,13 @@ We will start with the graphical interface. Then, we will learn about the comman
 1. Go to [NCBI](https://www.ncbi.nlm.nih.gov/).
 2. Search for the gene `FOXP2`, then open the [Orthologs visualization tool](https://www.ncbi.nlm.nih.gov/datasets/gene/3077/#orthologs).
 
-   ![NCBI FOXP2 orthologs visualization tool](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/91b11fcc-f0e5-454f-961b-c78467fcb74b){ width="800" }
+    ![NCBI FOXP2 orthologs visualization tool](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/91b11fcc-f0e5-454f-961b-c78467fcb74b){ width="800" }
 
 3. Use **Search the Taxonomy Tree** to filter for the group you are interested in. In this example, placental mammals should work.
 4. Select the species you want to download by clicking the empty box beside each name.
 5. Select **Download > RefSeq Transcripts (FASTA) > One sequence per gene** to get a FASTA file containing your sequences of interest.
 
-   ![Selecting RefSeq transcripts for download](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/2e40e2e8-dc9f-487e-85fa-eeebedd158c6){ width="800" }
+    ![Selecting RefSeq transcripts for download](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/2e40e2e8-dc9f-487e-85fa-eeebedd158c6){ width="800" }
 
 6. Save the downloaded file (for example, `FOXP2_refseq_transcript.fasta`) in the `tutorial_3` folder on your computer.
 
@@ -76,24 +76,24 @@ This is a useful way to download a set of **coding sequences**, which you can an
 
 This part of the tutorial was adapted from NCBI's own tutorial: [Get one protein per gene from a set of orthologs](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/tutorials/ortholog-get-one-isoform/). Feel free to check it out for more details!
 
-1. Access our lab server, Awarnach. For a reminder, see [Tutorial 2](tutorial_2.md).
-
-2. Activate the environment where `ncbi_datasets` is installed:
-
-   ```sh
-   source activate ncbi_datasets
-   ```
-
-3. Navigate to your `tutorial_3` folder using `cd` followed by the path to the folder:
-
-   ```sh
-   cd tutorials_2025/tutorial_3/
-   ```
-
 !!! note "Why choose one transcript per gene?"
     Many genes undergo alternative splicing and have multiple transcript variants (mRNA isoforms). These transcripts come from the same gene, but their coding sequences and lengths can differ.
 
     Many comparative genomic studies use one sequence per gene. A common approach is to select the longest transcript, although the longest transcript is not necessarily the best representative of the complete coding sequence in every case.
+
+1. Access our lab server, Awarnach. For a reminder, see [Tutorial 2](tutorial_2.md).
+
+2. Activate the environment where `ncbi_datasets` is installed:
+
+    ```sh
+    source activate ncbi_datasets
+    ```
+
+3. Navigate to your `tutorial_3` folder using `cd` followed by the path to the folder:
+
+    ```sh
+    cd tutorials_2025/tutorial_3/
+    ```
 
 4. We will now download a representative FOXP2 transcript for each species. For the steps below, copy and paste the commands into your terminal and press Enter. Read each command to understand what it does.
 
