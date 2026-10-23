@@ -1,0 +1,1251 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://evolution-for-everyone.github.io/tutorial_3/">
+      
+      
+        <link rel="prev" href="../tutorial_2/">
+      
+      
+        <link rel="next" href="../tutorial_4/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Tutorial 3 - Downloading genomic sequences - Evolution for Everyone</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-3-downloading-genomic-sequences" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Evolution for Everyone" class="md-header__button md-logo" aria-label="Evolution for Everyone" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Evolution for Everyone
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial 3 - Downloading genomic sequences
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-purple"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Evolution for Everyone" class="md-nav__button md-logo" aria-label="Evolution for Everyone" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Evolution for Everyone
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to Evolution for Everyone!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 1 - Introduction to command line and bash
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 2 - Working on a server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 3 - Downloading genomic sequences
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 3 - Downloading genomic sequences
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-do-genomic-sequences-look-like-on-my-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What do genomic sequences look like on my computer?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-downloading-genomic-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Downloading genomic sequences
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Downloading genomic sequences">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#downloading-sequences-from-ncbi-nucleotide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Downloading sequences from NCBI Nucleotide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pause-for-a-deep-breath" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Pause for a deep breath
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloading-sequences-using-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Downloading sequences using command-line
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🍄 Downloading sequences using command-line">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-foxp2-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Getting FOXP2 metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extracting-information-about-sequence-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Extracting information about sequence length
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-a-list-of-the-longest-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Making a list of the longest sequences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloading-the-longest-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Downloading the longest sequences
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-preparing-sequences-for-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Preparing sequences for analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Preparing sequences for analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-the-headers-of-a-fasta-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Editing the headers of a fasta file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 4 - Building sequence alignments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 5 - Estimating gene trees with IQTree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 6 - Natural selection analyses with codeml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-do-genomic-sequences-look-like-on-my-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What do genomic sequences look like on my computer?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-downloading-genomic-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Downloading genomic sequences
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Downloading genomic sequences">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#downloading-sequences-from-ncbi-nucleotide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Downloading sequences from NCBI Nucleotide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pause-for-a-deep-breath" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Pause for a deep breath
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloading-sequences-using-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Downloading sequences using command-line
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🍄 Downloading sequences using command-line">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-foxp2-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Getting FOXP2 metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extracting-information-about-sequence-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Extracting information about sequence length
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-a-list-of-the-longest-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Making a list of the longest sequences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloading-the-longest-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Downloading the longest sequences
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-preparing-sequences-for-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Preparing sequences for analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Preparing sequences for analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-the-headers-of-a-fasta-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Editing the headers of a fasta file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tutorial-3-downloading-genomic-sequences">Tutorial 3 - Downloading genomic sequences</h1>
+<h2 id="1-what-do-genomic-sequences-look-like-on-my-computer">1. What do genomic sequences look like on my computer?</h2>
+<p>A genomic sequence is any sequence that has been extracted from a genome.<br />
+🐞 It could be a gene, a protein, or a non-coding element (like a regulatory region).</p>
+<p>These sequences are often saved as text files in different formats. One of the most common formats for evolutionary analyses is <strong>FASTA</strong>.</p>
+<div class="admonition important">
+<p class="admonition-title">FASTA format</p>
+<p>A FASTA file is made up of two elements:</p>
+<ul>
+<li><strong>Header:</strong> A line at the beginning of a sequence that tells you about it. The header starts with <code>&gt;</code> followed by descriptive text.</li>
+<li><strong>Sequence:</strong> The nucleotides or amino acids that make up the gene, protein, or non-coding element. The sequence starts on the line immediately below the header and is usually wrapped every 60–80 characters.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&gt;XM_019925131.2:314-2584 PREDICTED: Tursiops truncatus forkhead box P2 (FOXP2), mRNA
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ATGATGCAGGAATCTGCGACAGAGACAATAAGCAACAGTTCAATGAATCAAAATGGAATGAGCACTCTAA
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>GCAGCCAATTAGATGCTGGCAGCAGAGATGGAAGATCAAGTGGTGACACCAGCTCTGAAGTAAGCACAGT
+</code></pre></div>
+</div>
+<h2 id="2-downloading-genomic-sequences">2. Downloading genomic sequences</h2>
+<p>In our tutorials, we will analyze the coding sequences of the <strong>FOXP2 gene</strong>.</p>
+<ul>
+<li>Our goal is to investigate how FOXP2 evolved in mammals that are capable of vocal learning (like us!).</li>
+<li>First, we need to obtain <strong>our data set</strong>: a collection of FOXP2 sequences for different mammal species.</li>
+<li>We will download these sequences from <strong><a href="https://www.ncbi.nlm.nih.gov/">NCBI</a></strong>, one of the most widely used genomic databases.</li>
+</ul>
+<p>🐞 To download our FOXP2 sequences, we need to know the <strong>species names</strong> and <strong>accession numbers</strong>. Accession numbers are unique identifiers that NCBI assigns to individual sequences.</p>
+<p>Our data set will include the following 10 species:</p>
+<ul>
+<li>Human (<em>Homo sapiens</em>) | NM_014491.4</li>
+<li>Chimpanzee (<em>Pan troglodytes</em>) | XM_063813769.1</li>
+<li>Cow (<em>Bos taurus</em>) | NM_001205569.3</li>
+<li>Bottlenose dolphin (<em>Tursiops truncatus</em>) | XM_019925131.2</li>
+<li>Killer whale (<em>Orcinus orca</em>) | XM_049715204.1</li>
+<li>Harbor seal (<em>Phoca vitulina</em>) | XM_032401732.1</li>
+<li>Dog (<em>Canis lupus familiaris</em>) | XM_038439870.1</li>
+<li>Little brown bat (<em>Myotis lucifugus</em>) | XM_023760067.1</li>
+<li>African elephant (<em>Loxodonta africana</em>) | XM_023544567.1</li>
+<li>Manatee (<em>Trichechus manatus latirostris</em>) | XM_004382567.2</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">How can I download the sequences?</p>
+<p>There are two main ways to download these sequences from NCBI:</p>
+<ul>
+<li>Use the graphical interface on the NCBI website.</li>
+<li>Use the command line in your terminal.</li>
+</ul>
+</div>
+<p>We will start with the graphical interface. Then, we will learn about the command-line version, which is <strong>essential</strong> if you are interested in working with coding sequences.</p>
+<h3 id="downloading-sequences-from-ncbi-nucleotide">🍄 Downloading sequences from NCBI Nucleotide</h3>
+<ol>
+<li>Go to <a href="https://www.ncbi.nlm.nih.gov/">NCBI</a>.</li>
+<li>
+<p>Search for the gene <code>FOXP2</code>, then open the <a href="https://www.ncbi.nlm.nih.gov/datasets/gene/3077/#orthologs">Orthologs visualization tool</a>.</p>
+<p><img alt="NCBI FOXP2 orthologs visualization tool" src="https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/91b11fcc-f0e5-454f-961b-c78467fcb74b" width="800" /></p>
+</li>
+<li>
+<p>Use <strong>Search the Taxonomy Tree</strong> to filter for the group you are interested in. In this example, placental mammals should work.</p>
+</li>
+<li>Select the species you want to download by clicking the empty box beside each name.</li>
+<li>
+<p>Select <strong>Download &gt; RefSeq Transcripts (FASTA) &gt; One sequence per gene</strong> to get a FASTA file containing your sequences of interest.</p>
+<p><img alt="Selecting RefSeq transcripts for download" src="https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/2e40e2e8-dc9f-487e-85fa-eeebedd158c6" width="800" /></p>
+</li>
+<li>
+<p>Save the downloaded file (for example, <code>FOXP2_refseq_transcript.fasta</code>) in the <code>tutorial_3</code> folder on your computer.</p>
+</li>
+</ol>
+<h3 id="pause-for-a-deep-breath">🍄 Pause for a deep breath</h3>
+<p>Brace yourself and take a deep breath. Things will get a little more complicated, but it's nothing you can't master with practice!</p>
+<p><img alt="Take a deep breath" src="https://github.com/user-attachments/assets/7f2c1553-314d-478b-9b30-3ff36d9df453" width="300" /></p>
+<h3 id="downloading-sequences-using-command-line">🍄 Downloading sequences using command-line</h3>
+<p>We will now learn how to download genomic sequences using the command line.<br />
+This is a useful way to download a set of <strong>coding sequences</strong>, which you can analyze with codon models such as <strong>codeml</strong>.</p>
+<p>This part of the tutorial was adapted from NCBI's own tutorial: <a href="https://www.ncbi.nlm.nih.gov/datasets/docs/v2/tutorials/ortholog-get-one-isoform/">Get one protein per gene from a set of orthologs</a>. Feel free to check it out for more details!</p>
+<div class="admonition note">
+<p class="admonition-title">Why choose one transcript per gene?</p>
+<p>Many genes undergo alternative splicing and have multiple transcript variants (mRNA isoforms). These transcripts come from the same gene, but their coding sequences and lengths can differ.</p>
+<p>Many comparative genomic studies use one sequence per gene. A common approach is to select the longest transcript, although the longest transcript is not necessarily the best representative of the complete coding sequence in every case.</p>
+</div>
+<details class="info">
+<summary>For Awarnach server users</summary>
+<p>Access our lab server, Awarnach. For a reminder, see <a href="../tutorial_2/">Tutorial 2</a>.</p>
+<p>Activate the environment where <code>ncbi_datasets</code> is installed:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>ncbi_datasets
+</code></pre></div>
+</details>
+<ol>
+<li>
+<p>Download the <code>ncbi-datasets</code> command-line tool from NCBI using conda:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>ncbi-datasets-cli
+</code></pre></div>
+<p>If that doesn't work, you can find alternative ways <a href="https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/">here</a>.     </p>
+</li>
+<li>
+<p>Navigate to your <code>tutorial_3</code> folder using <code>cd</code> followed by the path to the folder:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>tutorials_2026/tutorial_3/
+</code></pre></div>
+</li>
+<li>
+<p>We will now download the longest FOXP2 transcript for each species. For the steps below, copy and paste the commands into your terminal and press <code>Enter</code>. <br />
+<strong>Don't forget</strong> to read each command to understand what it does!</p>
+</li>
+</ol>
+<p>🐛 This part can be challenging for beginners, so each completed step unlocks a celebratory cat GIF.<br />
+<strong>You got this!</strong></p>
+<p><img alt="You can do it" src="https://github.com/user-attachments/assets/a5450877-37d5-4e5c-ace8-7ca774857788" width="300" /></p>
+<h4 id="getting-foxp2-metadata"><strong>🐞 Getting FOXP2 metadata</strong></h4>
+<p>We will use the <code>datasets summary</code> command to retrieve metadata about our FOXP2 sequences.<br />
+We can do this in two ways: by providing the <strong>gene name</strong> OR the <strong>accession numbers</strong> of the sequences we want to download.  </p>
+<p><strong>1. By gene name</strong>  <br />
+We are going to use the command below to get every record of FOXP2 for humans and other mammals.<br />
+Note how the command is built:</p>
+<ul>
+<li>First, we say we want the summary - which is a data report - and we specify FOXP2 as our target gene with <code>gene symbol</code></li>
+<li>Then, we pass 4 options into the command:<ul>
+<li><code>taxon</code>: the species we want as our reference. 9606 is human (it's safer to use numbers rather than names here)</li>
+<li><code>ortholog</code>: the group for which we will download FOXP2 orthologs (same gene for different species), based on our reference species. 40674 is Mammals</li>
+<li><code>report product</code>: the type of report we want. In this case, we want the product, which contains the transcript information we need.</li>
+<li><code>as-json-lines</code>: the format we want our report in (has to be json because of the next command)</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>datasets<span class="w"> </span>summary<span class="w"> </span>gene<span class="w"> </span>symbol<span class="w"> </span>FOXP2<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>--taxon<span class="w"> </span><span class="m">9606</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span>--ortholog<span class="w"> </span><span class="m">40674</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span>--report<span class="w"> </span>product<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span>--as-json-lines
+</code></pre></div>
+<p><strong>2. By accession number</strong><br />
+In this case, our input will be the accession numbers of the 10 sequences listed earlier. <br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span>datasets<span class="w"> </span>summary<span class="w"> </span>gene<span class="w"> </span>accession<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span>NM_014491.4<span class="w"> </span>XM_063813769.1<span class="w"> </span>NM_001205569.3<span class="w"> </span>XM_019925131.2<span class="w"> </span>XM_049715204.1<span class="w"> </span>XM_032401732.1<span class="w"> </span>XM_038439870.1<span class="w"> </span>XM_023760067.1<span class="w"> </span>XM_023544567.1<span class="w"> </span>XM_004382567.2<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span>--report<span class="w"> </span>product<span class="w"> </span>--as-json-lines<span class="w"> </span>&gt;<span class="w"> </span>foxp2_orthologs.jsonl
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">What is metadata?</p>
+<p>Metadata is information that provides context about the data. For NCBI sequences, it can include:</p>
+<ul>
+<li>Common gene name</li>
+<li>Gene ID (an identifier unique to each gene)</li>
+<li>Species or taxon name</li>
+<li>Sequence accession number</li>
+<li>Sequence length</li>
+</ul>
+</div>
+<details class="success">
+<summary>Well done! Click to unlock celebratory cat #1</summary>
+<p><img alt="Celebratory cat 1" src="https://i.pinimg.com/originals/61/79/3d/61793d8588130c2ea05abb955326c5d3.gif" width="200" /></p>
+</details>
+<h4 id="extracting-information-about-sequence-length"><strong>🐞 Extracting information about sequence length</strong></h4>
+<p>We will use the <code>dataformat</code> command to extract the <a href="https://www.ncbi.nlm.nih.gov/datasets/docs/v2/reference-docs/data-reports/gene-product/">Gene Product Report</a> from our JSON Lines file and convert it into a readable table in TSV format.<br />
+This report contains information about FOXP2 transcripts and proteins.<br />
+The <code>--fields</code> option specifies which information to include in the table, such as gene ID, symbol, and transcript length.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>dataformat<span class="w"> </span>tsv<span class="w"> </span>gene-product<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>--inputfile<span class="w"> </span>foxp2_orthologs.jsonl<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>--fields<span class="w"> </span>gene-id,tax-name,symbol,transcript-accession,transcript-length,transcript-protein-accession,transcript-protein-length<span class="w"> </span>&gt;<span class="w"> </span>transcript_protein.tsv
+</code></pre></div>
+<p>Let's take a look at this table using <code>head</code>, which displays the first 10 lines of a file. It's useful for taking a quick look at long files.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>head<span class="w"> </span>transcript_protein.tsv
+</code></pre></div>
+<p>The beginning of your table should look like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>NCBI GeneID Taxonomic Name  Symbol  Transcript Accession    Transcript Length   Transcript Protein Accession    Transcript Protein Length
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>93986   Homo sapiens    FOXP2   NR_033766.2 6355        
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>93986   Homo sapiens    FOXP2   NR_033767.2 6601        
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>93986   Homo sapiens    FOXP2   NM_148898.4 6618    NP_683696.2 740
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>93986   Homo sapiens    FOXP2   NM_148900.4 6594    NP_683698.2 732
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>93986   Homo sapiens    FOXP2   NM_014491.4 6543    NP_055306.1 715
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>93986   Homo sapiens    FOXP2   NM_001172766.3  6540    NP_001166237.1  714
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>93986   Homo sapiens    FOXP2   NM_001172767.2  1485    NP_001166238.1  457
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>93986   Homo sapiens    FOXP2   NM_148899.3 1410    NP_683697.2 432
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>449627  Pan troglodytes FOXP2   XM_063813769.1  4716    XP_063669839.1  764
+</code></pre></div>
+<p>📍 Let's break down this table:</p>
+<ul>
+<li>The first line contains the column headers: gene ID, taxonomic name, symbol, transcript accession, transcript length, protein accession, and protein length.</li>
+<li>The columns are separated by tabs, so the table has seven columns.</li>
+<li>The first column contains the gene ID, the second the taxon name, and the third the gene name (the "symbol").</li>
+<li>Can you find the column with transcript accession numbers? What about protein length?</li>
+</ul>
+<details class="success">
+<summary>Great work! Click to unlock celebratory cat #2</summary>
+<p><img alt="Celebratory cat 2" src="https://i.pinimg.com/originals/e1/c6/82/e1c6829221cf788ca7384af54b9b94ee.gif" width="300" /></p>
+</details>
+<h4 id="making-a-list-of-the-longest-sequences"><strong>🐞 Making a list of the longest sequences</strong></h4>
+<p>Now we will use a Bash script to locate the longest FOXP2 transcript and corresponding protein for each species and save their accession numbers in a list. The accession numbers will let us identify these sequences and download them later.</p>
+<p>📍 Since this is a large script, it's safer to save it as a file and then run it. Create a new file:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>nano<span class="w"> </span>list_longest.sh
+</code></pre></div>
+<p>Once your text editor is open, copy the script below and paste it into the editor using <code>Ctrl+V</code>.<br />
+Don't be scared! The comments starting with <code>#</code> explain what each part of the script does.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Removes the first line (header) from the file and passes the rest to the next command</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>tail<span class="w"> </span>-n<span class="w"> </span>+2<span class="w"> </span>transcript_protein.tsv<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1"># Extracts the first column (gene IDs)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>cut<span class="w"> </span>-f1<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1"># Sorts gene IDs alphabetically and removes duplicates</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>sort<span class="w"> </span>-u<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># Reads each unique gene ID one by one</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>GENE_IDS<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">        </span><span class="c1"># Searches for lines where the first column matches the gene ID</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">        </span><span class="nv">LONGEST</span><span class="o">=</span><span class="k">$(</span>grep<span class="w"> </span>-w<span class="w"> </span><span class="s2">"^</span><span class="nv">$GENE_IDS</span><span class="s2">"</span><span class="w"> </span>transcript_protein.tsv<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="c1"># Sorts the filtered lines numerically (-n), in descending order (-r), based on column 7 (protein length)</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">        </span>sort<span class="w"> </span>-t<span class="s1">$'\t'</span><span class="w"> </span>-nr<span class="w"> </span>-k7<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">        </span><span class="c1"># Selects the top row (the transcript with the longest protein sequence)</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">        </span>head<span class="w"> </span>-n1<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">        </span><span class="c1"># Extracts column 4 (transcript ID) and column 6 (protein ID)</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span>cut<span class="w"> </span>-f4,6<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">        </span><span class="c1"># Converts the tab-separated values into newline-separated values</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">        </span>tr<span class="w"> </span><span class="s1">'\t'</span><span class="w"> </span><span class="s1">'\n'</span><span class="k">)</span><span class="p">;</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">        </span><span class="c1"># Appends the transcript ID and protein ID of the longest transcript to longest.list</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">        </span><span class="nb">printf</span><span class="w"> </span><span class="s2">"</span><span class="nv">$LONGEST</span><span class="s2">\n"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>longest.list<span class="p">;</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="k">done</span>
+</code></pre></div>
+<p>Now run the script by entering <code>bash list_longest.sh</code>. This tells the terminal to interpret the file using Bash.</p>
+<p>📍 After it runs successfully, your script should have created a file named <code>longest.list</code>. Let's take a look:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>cat<span class="w"> </span>longest.list
+</code></pre></div>
+<p>You should see on your screen the accession numbers of the longest transcripts and proteins, like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>XM_023544567.1
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>XP_023400335.1
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>XM_049715208.1
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>XP_049571165.1
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>XM_019925131.2
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>XP_019780690.1
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>XM_004382567.2
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>XP_004382624.1
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>XM_023760067.1
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>XP_023615835.1
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>XM_032401732.1
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>XP_032257623.1
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>XM_063813769.1
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>XP_063669839.1
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>XM_038687039.1
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>XP_038542967.1
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>XM_015469121.3
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>XP_015324607.1
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>NM_148898.4
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>NP_683696.2
+</code></pre></div>
+<details class="success">
+<summary>Almost there! Click to unlock celebratory cat #3</summary>
+<p><img alt="Celebratory cat 3" src="https://i.pinimg.com/originals/40/45/1e/40451ec95d906f7c739cf21038dca0b6.gif" width="300" /></p>
+</details>
+<h4 id="downloading-the-longest-sequences"><strong>🐞 Downloading the longest sequences</strong></h4>
+<p>Finally, it's time to download the selected transcripts (your data set)!<br />
+We will use the <code>datasets download</code> command to download the sequences from NCBI.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>datasets<span class="w"> </span>download<span class="w"> </span>gene<span class="w"> </span>accession<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>--inputfile<span class="w"> </span>longest.list<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>--fasta-filter-file<span class="w"> </span>longest.list<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>--include<span class="w"> </span>rna,cds,protein<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>--filename<span class="w"> </span>longest.zip
+</code></pre></div>
+<p>After running this command, you should see output similar to this:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Collecting 10 gene records [================================================] 100% 10/10
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Downloading: longest.zip    33.5kB valid zip structure -- files not checked
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Validating package [================================================] 100% 7/7
+</code></pre></div><br />
+If the progress bar reaches 100%, the download was successful. The result is a ZIP file called <code>longest.zip</code>.</p>
+<p>📍 Now let's look at the downloaded sequences by unzipping <code>longest.zip</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>unzip<span class="w"> </span>longest.zip
+</code></pre></div>
+<p>After entering the command, you should see output similar to this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Archive:  longest.zip
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>  inflating: README.md
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>  inflating: ncbi_dataset/data/rna.fna
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>  inflating: ncbi_dataset/data/cds.fna
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>  inflating: ncbi_dataset/data/protein.faa
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>  inflating: ncbi_dataset/data/data_report.jsonl
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>  inflating: ncbi_dataset/data/dataset_catalog.json
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>  inflating: md5sum.txt
+</code></pre></div>
+<p>Now, if you list (<code>ls</code>) what's inside your current folder, you will notice a new folder called <code>ncbi_dataset</code>. Let's see what's inside:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>ls<span class="w"> </span>ncbi_dataset
+</code></pre></div>
+<p>Inside <code>ncbi_dataset</code> there's a folder called <code>data</code>. To see what's inside <code>data</code>, use <code>ls</code> again, followed by the path to <code>data</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ls<span class="w"> </span>ncbi_dataset/data
+</code></pre></div>
+<p>You should see the following files: <code>cds.fna  data_report.jsonl  dataset_catalog.json  protein.faa  rna.fna</code></p>
+<p><img alt="Celebration GIF" src="https://i.pinimg.com/originals/20/ee/a8/20eea82d92e4b972c25d8b55455aa921.gif" width="400" /></p>
+<p><strong>🌺 And there's our data!</strong></p>
+<p>The sequence data of the FOXP2 gene is contained in 3 files:</p>
+<ul>
+<li><code>rna.fna</code> contains the selected transcripts.</li>
+<li><code>protein.faa</code> contains the corresponding protein sequences.</li>
+<li><code>cds.fna</code> (which will be important in the next tutorials) contains the coding sequences.</li>
+</ul>
+<p>Using <code>head</code>, take a look at the first lines of these three files.<br />
+<strong>But watch out!</strong> You are inside <code>tutorial_3</code>, and the files are in <code>ncbi_dataset/data</code>. There are two ways to run the command:</p>
+<ul>
+<li>Navigate to <code>data</code>, then use <code>head</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">cd</span><span class="w"> </span>ncbi_dataset/data
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>head<span class="w"> </span>rna.fna
+</code></pre></div>
+<ul>
+<li>Run <code>head</code> from your current directory and provide the path to the input file:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>head<span class="w"> </span>ncbi_dataset/data/rna.fna
+</code></pre></div>
+<p>Choose whichever way you prefer, and do this for all three files. The first lines of <code>rna.fna</code> should look like this:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>&gt;XM_015469121.3 FOXP2 [organism=Bos taurus] [GeneID=505502] [transcript=X1]
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>GGACCTGGCAGAGTCCCCACGGACGAGAGCGGGACTCGGGCGCTGGAGGCTGGGCCCGCGCACTCCCCAC
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>GCCGGCGTCTCGGCTTTGAAGTGCGAGCGGCAGTTCTGGCAGTTTCTTCTTTCCTTTCATTCCGGTTACT
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>TTGCTCCCCTCAGTCACTGACAGGCCCGTCTCGAGAGCCTCAGACCCCCAAAGTCTCAGCTCGGCAACCC
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>CTTCCTTCTAAGCTCCGCCCCGGCCGAACCGCAGCCCGGCGCCGAGCCGGTGACCAGGGCTGGGGGATCA
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>CGAGGAAGCCCGAGAACTCCCGGGTCCAAGTGAGACAGGAGCCCGACAACAATGAAGAGTGAGAAAGACA
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>CTCGGCCTCTCCACCCCAGGCCGCAGAGGCGCACACCGCGAAAAGAAAGGCCAGTCAGCGTTTTAACGCA
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>CGCTTGGGTCTCCCTTTCTGACTCTCGAGTACTTTAACTCCTTGCCACCGAGGGCTTTGGATCCCTTCGA
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>GGCTTCCTGCACTTCACTTGGAATTCCCTGTTTCATTTGCCAGCAGCTCCGTCTGCTGAGAGGACGTACT
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>TTAGGGACTGCCAAGAAGCAGCAGACACAACTCAGCTTTGCCAATACAGCATAAGGTTTTGTTCTCTCCT
+</code></pre></div><br />
+The first lines of <code>protein.faa</code> should look like this:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>&gt;XP_015324607.1 FOXP2 [organism=Bos taurus] [GeneID=505502] [isoform=X1]
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>SGLKSPKSSDKQRPLQELLPETKLCVCGHSSGDGHPHNTFAVPVSVAMMTPQVITPQQMQQILQQQVLSP
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>QQLQALLQQQQAVMLQQQQLQEFYKKQQEQLHLQLLQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQP
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>QQQHPGKQAKEVGSGQLIHAEEREQQQQQLAAQQLVFQQQLLQMQQLQQQQHLLSLQRQGLISIPPGQAA
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>LPVQSLPQAGLSPAEIQQLWKEVTGVHSMEDNGIKHGGLDLTTNNSSSTTSSTTSKASPPITHHTIVNGQ
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>SSVLNARRDSSSHEETGASHTLYGHGVCKWPGCESICEDFGQFLKHLNNEHALDDRSTAQCRVQMQVVQQ
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>LEIQLSKERERLQAMMTHLHMRPSEPKPSPKPLNLVSSVTMSKNMLETSPQSLPQTPTTPTAPVTPITQG
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>PSVITPASVPNVGAIRRRHSDKYNIPMSSEIAPNYEFYKNADVRPPFTYATLIRQAIMESSDRQLTLNEI
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>YSWFTRTFAYFRRNAATWKNAVRHNLSLHKCFVRVENVKGAVWTVDEVEYQKRRSQKITGSPTLVKNIPT
+</code></pre></div><br />
+The first lines of <code>cds.fna</code> should look like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>ATGATGCAGGAATCTGCGACAGAGACAATAAGCAACAGTTCAATGAATCAAAATGGAATGAGCACTCTAA
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>GCAGCCAATTAGATGCTGGCAGCAGAGATGGAAGATCAAGTGGTGACACCAGCTCGGAAGTAAGCACAGT
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>AGAACTGCTGCATCTGCAACAACAGCAGGCTCTCCAAGCAGCGAGACAACTTCTCTTACAGCAGCAAACA
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>AGTGGATTGAAATCTCCTAAGAGCAGTGATAAACAGAGACCACTGCAGGAATTGCTTCCAGAAACAAAAT
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>TATGTGTCTGTGGCCACTCTTCTGGTGATGGGCATCCTCACAACACATTTGCAGTGCCCGTGTCAGTGGC
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>CATGATGACTCCCCAGGTGATCACCCCTCAGCAAATGCAGCAGATCCTTCAGCAGCAAGTCCTGTCTCCT
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>CAGCAGCTCCAAGCCCTCCTTCAGCAGCAGCAGGCAGTCATGCTGCAGCAGTCAAAATGGTTTATTCAGC
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>AACAACTACAAGAGTTTTACAAGAAACAGCAAGAGCAGTTACATCTTCAGCTTTTGCAGCAGCAGCAACA
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>GCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCAGCAGCAGCAGCAGCAGCAGCAACAGCAGCAGCAGCCC
+</code></pre></div>
+<p><strong>Do these sequences remind you of the <code>fasta</code> format we talked about at the beginning?</strong></p>
+<p>Well, there you go! You have just downloaded your first genomic sequences in <code>fasta</code> format. 🌺</p>
+<p><strong>Do you notice any differences between these three sequences? How are they different?</strong></p>
+<h2 id="3-preparing-sequences-for-analysis">3. Preparing sequences for analysis</h2>
+<h3 id="editing-the-headers-of-a-fasta-file">🍄 Editing the headers of a fasta file</h3>
+<p>The FASTA headers contain several fields. This command creates shorter headers from the gene name, organism, and transcript information, while leaving the sequence lines unchanged. It writes the result to <code>cds_headers.fna</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>awk<span class="w"> </span>-F<span class="s1">' '</span><span class="w"> </span><span class="s1">'</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="s1">/^&gt;/ {</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="s1">    gene = $2                          # Extract second field (FOXP2)</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="s1">    sub(/\[organism=/, "", $3)         # Remove "[organism=" from third field</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="s1">    org = substr($3, 1, 1)             # Take the first letter (C)</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="s1">    sub(/\]/, "", $4)                  # Remove closing bracket if present</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="s1">    ending = substr($4, 1, 3)          # Take first three letters (lup)</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="s1">    print "&gt;" gene "_" org ending      # Output formatted header</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="s1">    next                               # Skip further processing for header lines</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="s1">}</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="s1">{print}  # Print sequence lines unchanged</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="s1">'</span><span class="w"> </span>cds.fna<span class="w"> </span>&gt;<span class="w"> </span>cds_headers.fna
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
