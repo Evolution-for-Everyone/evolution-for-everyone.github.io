@@ -1,4 +1,4 @@
-# Tutorial - 5 Estimating gene trees with IQTree
+# Tutorial 5 - Estimating gene trees with IQTree
 
 ## 🌺 What are gene trees? { #gene-trees }
 
