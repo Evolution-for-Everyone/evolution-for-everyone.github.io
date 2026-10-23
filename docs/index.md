@@ -8,7 +8,7 @@ We are outreach organization making evolutionnary biology more accessible to stu
 if you are interested in having a workshop at your university, please reach out at leticiamagpali@dal.ca
 
 🦋 You can also learn by yourself right here!
-To acess all our workshops tutorials, data and materials, as well as outside resources, check our workshops tab.
+To acess all our workshops tutorials, data and materials, as well as outside resources, check our Learning tab.
 
 🦋 If you are a collaborator, find our project roadmap here.
 
