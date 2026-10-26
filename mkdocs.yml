@@ -23,7 +23,6 @@ theme:
     - navigation.indexes
     - navigation.tabs
     - navigation.tracking
-    - navigation.tabs.sticky
     - navigation.path
     - navigation.top
 
