@@ -1,5 +1,19 @@
 site_name: Evolution for Everyone
 site_url: https://evolution-for-everyone.github.io
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Tutorials:
+    - tutorials/index.md 
+    - Tutorial 0: tutorials/tutorial_0.md
+    - Tutorial 1: tutorials/tutorial_1.md
+    - Tutorial 2: tutorials/tutorial_2.md
+    - Tutorial 3: tutorials/tutorial_3.md
+    - Tutorial 4: tutorials/tutorial_4.md
+    - Tutorial 5: tutorials/tutorial_5.md
+    - Tutorial 6: tutorials/tutorial_6.md
+
 theme:
   name: material 
   font: 
@@ -38,17 +52,6 @@ theme:
         name: Dark mode
       primary: purple
       accent: deep purple
-  
-nav:
-  - Section:
-    - tutorials/index.md 
-    - Tutorial 0: tutorials/tutorial_0.md
-    - Tutorial 1: tutorials/tutorial_1.md
-    - Tutorial 2: tutorials/tutorial_2.md
-    - Tutorial 3: tutorials/tutorial_3.md
-    - Tutorial 4: tutorials/tutorial_4.md
-    - Tutorial 5: tutorials/tutorial_5.md
-    - Tutorial 6: tutorials/tutorial_6.md
 
 
 markdown_extensions:
