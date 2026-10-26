@@ -1,0 +1,45 @@
+[project]
+site_name = "Evolution for Everyone"
+site_url = "https://evolution-for-everyone.github.io"
+nav = [
+  { "Home" = "index.md" },
+  { "About" = "about.md" },
+  { "Tutorials" = [
+    "tutorials/index.md",
+    { "Tutorial 0" = "tutorials/tutorial_0.md" },
+    { "Tutorial 1" = "tutorials/tutorial_1.md" },
+    { "Tutorial 2" = "tutorials/tutorial_2.md" },
+    { "Tutorial 3" = "tutorials/tutorial_3.md" },
+    { "Tutorial 4" = "tutorials/tutorial_4.md" },
+    { "Tutorial 5" = "tutorials/tutorial_5.md" },
+    { "Tutorial 6" = "tutorials/tutorial_6.md" },
+  ] },
+]
+
+[project.theme]
+variant = "classic"
+font = { text = "Roboto", code = "Red Hat Mono" }
+features = [
+  "navigation.indexes",
+  "navigation.tracking",
+  "navigation.path",
+  "navigation.top",
+]
+palette = [
+  { media = "(prefers-color-scheme)", toggle = { icon = "material/brightness-auto", name = "Switch to light mode" } },
+  { media = "(prefers-color-scheme: light)", scheme = "default", toggle = { icon = "material/weather-night", name = "Light mode" }, primary = "teal", accent = "lime" },
+  { media = "(prefers-color-scheme: dark)", scheme = "slate", toggle = { icon = "material/weather-sunny", name = "Dark mode" }, primary = "purple", accent = "deep purple" },
+]
+
+[project.markdown_extensions]
+attr_list = {}
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true
+admonition = {}
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.inlinehilite = {}
+pymdownx.snippets = {}
+nl2br = {}
