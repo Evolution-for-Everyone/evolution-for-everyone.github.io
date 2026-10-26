@@ -20,6 +20,7 @@ theme:
     text: Roboto
     code: Red Hat Mono
   features:
+    - navigation.indexes
     - navigation.tabs
     - navigation.tracking
     - navigation.tabs.sticky
