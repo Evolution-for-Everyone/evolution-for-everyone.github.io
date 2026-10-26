@@ -24,7 +24,6 @@ theme:
     - navigation.tabs
     - navigation.tracking
     - navigation.tabs.sticky
-    - navigation.sections
     - navigation.path
     - navigation.top
 
