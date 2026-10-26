@@ -5,34 +5,52 @@ theme:
   font: 
     text: Roboto
     code: Red Hat Mono
-  nav:
-    - Home: index.md
-    - About: about.md
-    - Learning:
-        - Tutorials:
-            - Tutorial 1 Introduction to command line and bash: tutorial_1.md
-            - Tutorial 2 Working on a server: tutorial_2.md
-            - Tutorial 3 Downloading genomic sequences: tutorial_3.md
-            - Tutorial 4 Building sequence alignments: tutorial_4.md
-            - Tutorial 5 Estimating gene trees with IQTree: tutorial_5.md
-            - Tutorial 6 Natural selection analyses with codeml: tutorial_6.md
+  features:
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.top
 
   palette:
-    - scheme: slate
+
+  # Automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+  # Light Mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: teal
+      accent: lime
+  
+  # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       toggle:
         icon: material/weather-sunny
         name: Dark mode
       primary: purple
       accent: deep purple
-
-    # Light Mode
-    - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Light mode
-      primary: teal
-      accent: deep purple
   
+nav:
+  - Section:
+    - tutorials/index.md 
+    - Tutorial 0: tutorials/tutorial_0.md
+    - Tutorial 1: tutorials/tutorial_1.md
+    - Tutorial 2: tutorials/tutorial_2.md
+    - Tutorial 3: tutorials/tutorial_3.md
+    - Tutorial 4: tutorials/tutorial_4.md
+    - Tutorial 5: tutorials/tutorial_5.md
+    - Tutorial 6: tutorials/tutorial_6.md
+
+
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
@@ -48,3 +66,6 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - nl2br
+
+plugins:
+  - search

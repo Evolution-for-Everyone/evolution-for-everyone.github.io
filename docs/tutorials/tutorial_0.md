@@ -1,4 +1,4 @@
-# Tutorial 1 - Introduction to command line and bash
+# Tutorial 0 - Introduction to command line and bash
 
 ## 1. Opening the terminal
 
