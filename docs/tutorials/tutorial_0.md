@@ -335,33 +335,3 @@ sandbox    tutorial_2 tutorial_4 tutorial_6
     * Did you spell everything right? No typos?
 
     **Remember**: Computers are really dumb! You have to tell them exactly what you want.
-
-## 5. Installing software
-
-To end this tutorial, we will install two software packages that will be very important in our future works (and they're good to have overall). Copy and paste the commands below on your terminal to install **Homebrew** and **Git**.
-
-**🐞 Homebrew**: package manager for macOS.
-
-We'll follow the instructions on [this page](https://brew.sh/) to install Homebrew. It will make it easier for us to install all sorts of other software and packages!
-
-**🐞 Git**: repository manager.
-
-Git helps us keep track of the changes we make in our files over time, and it's great for collaborative work.
-
-**How to install Git on MacOS:**
-
-```sh
-brew install git
-# This command uses homebrew to install git on your computer
-```
-
-**How to install Git on Linux/Unix:**
-
-```sh
-sudo apt-get install git-all
-# Linux has a native function called apt-get install
-# that you can use to get a lot of programs
-```
-
-!!! note
-    You can use `git --version` to find out what version of Git you have installed.

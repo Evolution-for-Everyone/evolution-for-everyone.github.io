@@ -62,6 +62,34 @@ With your terminal open on one side of the screen, and this tutorial on the othe
 - Install the datasets conda package: `conda install -c conda-forge ncbi-datasets-cli`
 
 
+## Installing Homebrew
+
+Homebrew is a package manager for macOS that is very useful for installing and maintaing "command-line only" programs. It will make it easier for us to install all sorts of other software and packages!
+
+We'll follow the instructions on [this page](https://brew.sh/) to install Homebrew. 
+
+
+## Installing Git
+
+Git is a repository manager. It helps us keep track of the changes we make in our files over time, and it's great for collaborative work.
+
+**How to install Git on MacOS:**
+
+```sh
+brew install git
+# This command uses homebrew to install git on your computer
+```
+
+**How to install Git on Linux/Unix:**
+
+```sh
+sudo apt-get install git-all
+# Linux has a native function called apt-get install
+# that you can use to get a lot of programs
+```
+
+!!! note
+    You can use `git --version` to find out what version of Git you have installed.
 
 ## Installing molecular evolution software 
 
