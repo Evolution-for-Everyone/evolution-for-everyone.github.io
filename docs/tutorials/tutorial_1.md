@@ -5,10 +5,6 @@ We are going to install those one by one.
 
 Some of the programs we will install are the regular kind of download that we are all used to, but others require the **command-line**, which you have already learned about in [Tutorial 0](tutorial_0.md).
 
-## Installing X-code (for mac users)
-Xcode is Apple's official Integrated Development Environment (IDE) for macOS used to build, test, debug, and submit software.
-You can install it directly from the [macOS Apple store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
-
 ## Installing alignment visualizing tools
 In Tutorial 3, we will visualize sequence alignments.   
 Below are the links to the most commonly used free apps for alignment visualization:    
@@ -52,6 +48,13 @@ With your terminal open on one side of the screen, and this tutorial on the othe
 
 - Once an installation is complete, you can begin another the same way.
 
+
+## Installing X-code command-line tools (for mac users)
+This package contains language compilers and other tools that are necessary to install most of our other software. So let's get this done first!
+
+```sh
+xcode-select --install
+```
 
 ## Installing NCBI datasets 
 
