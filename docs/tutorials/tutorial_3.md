@@ -7,7 +7,7 @@ A genomic sequence is any sequence that has been extracted from a genome.
 
 These sequences are often saved as text files in different formats. One of the most common formats for evolutionary analyses is **FASTA**.
 
-!!! important "FASTA format"
+!!! info "FASTA format"
     A FASTA file is made up of two elements:
 
     * **Header:** A line at the beginning of a sequence that tells you about it. The header starts with `>` followed by descriptive text.
@@ -27,43 +27,37 @@ In our tutorials, we will analyze the coding sequences of the **FOXP2 gene**.
 * First, we need to obtain **our data set**: a collection of FOXP2 sequences for different mammal species.
 * We will download these sequences from **[NCBI](https://www.ncbi.nlm.nih.gov/)**, one of the most widely used genomic databases.
 
-🐞 To download our FOXP2 sequences, we need to know the **species names** and **accession numbers**. Accession numbers are unique identifiers that NCBI assigns to individual sequences.
-
-Our data set will include the following 10 species:
-
-* Human (_Homo sapiens_) | NM_014491.4
-* Chimpanzee (_Pan troglodytes_) | XM_063813769.1
-* Cow (_Bos taurus_) | NM_001205569.3
-* Bottlenose dolphin (_Tursiops truncatus_) | XM_019925131.2
-* Killer whale (_Orcinus orca_) | XM_049715204.1
-* Harbor seal (_Phoca vitulina_) | XM_032401732.1
-* Dog (_Canis lupus familiaris_) | XM_038439870.1
-* Little brown bat (_Myotis lucifugus_) | XM_023760067.1
-* African elephant (_Loxodonta africana_) | XM_023544567.1
-* Manatee (_Trichechus manatus latirostris_) | XM_004382567.2
-
-!!! important "How can I download the sequences?"
-    There are two main ways to download these sequences from NCBI:
+!!!info "There are two main ways to download these sequences from NCBI:"    
 
     * Use the graphical interface on the NCBI website.
     * Use the command line in your terminal.
 
 We will start with the graphical interface. Then, we will learn about the command-line version, which is **essential** if you are interested in working with coding sequences.
 
-### 🍄 Downloading sequences from NCBI Nucleotide
+!!!warning "The NCBI website is always changing, so it might look slightly different from the tutorial's images."
 
-1. Go to [NCBI](https://www.ncbi.nlm.nih.gov/).
-2. Search for the gene `FOXP2`, then open the [Orthologs visualization tool](https://www.ncbi.nlm.nih.gov/datasets/gene/3077/#orthologs).
+### 🍄 Downloading sequences from NCBI Nucleotide   
 
-    ![NCBI FOXP2 orthologs visualization tool](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/91b11fcc-f0e5-454f-961b-c78467fcb74b){ width="800" }
+1. Go to the [NCBI Datasets Gene](https://www.ncbi.nlm.nih.gov/datasets/gene/) page.
 
-3. Use **Search the Taxonomy Tree** to filter for the group you are interested in. In this example, placental mammals should work.
-4. Select the species you want to download by clicking the empty box beside each name.
-5. Select **Download > RefSeq Transcripts (FASTA) > One sequence per gene** to get a FASTA file containing your sequences of interest.
+2. On the search bar, type `FOXP2` under Gene symbol and select `Mammalia` under Taxon, then hit Search.
 
-    ![Selecting RefSeq transcripts for download](https://github.com/leticiamagpali/vocal-learning-project/assets/71052306/2e40e2e8-dc9f-487e-85fa-eeebedd158c6){ width="800" }
+    ![](../images/Screenshot 2026-10-27 at 3.30.37 PM.png){ width="600" }
 
-6. Save the downloaded file (for example, `FOXP2_refseq_transcript.fasta`) in the `tutorial_3` folder on your computer.
+3. Select 10 species you want to download by clicking the empty box beside each name.      
+**Which species to select?** Any one is ok, we are just practicing!
+
+4. Select Download, then click on Download package.
+    ![](../images/Screenshot 2026-10-27 at 3.37.00 PM.png){ width="600" }
+
+5. A Download package window will pop up. Make sure that **CDS (FASTA)** and **Protein sequences (FASTA)** are selected. These two options will give you the coding sequences and proteins for the gene.    
+Hit Download.
+
+    ![](../images/Screenshot 2026-10-27 at 3.47.44 PM.png){ width="500" }
+
+6. On your downloads, look for a folder called `ncbi_dataset.zip`; click it to unzip.   
+    - This folder has the following structure: `ncbi_dataset > ncbi_dataset > data` (yes, two folders with the same name). Click through the folders until you reach `data`.  
+    - Inside data, you will find 2 files: `cds.faa` and `protein.faa`. Save these files in your `tutorial_3` folder.
 
 ### 🍄 Pause for a deep breath
 
@@ -117,7 +111,17 @@ This part of the tutorial was adapted from NCBI's own tutorial: [Get one protein
 #### **🐞 Getting FOXP2 metadata**
 
 We will use the `datasets summary` command to retrieve metadata about our FOXP2 sequences.  
-We can do this in two ways: by providing the **gene name** OR the **accession numbers** of the sequences we want to download.  
+
+!!! info "What is metadata?"
+    Metadata is information that provides context about the data. For NCBI sequences, it can include:
+
+    * Common gene name
+    * Gene ID (an identifier unique to each gene)
+    * Species or taxon name
+    * Sequence accession number
+    * Sequence length
+
+We can donwload the metadata in two ways: by providing the **gene name** OR the **accession numbers** (a unique record number) of the sequences we want to download.  
 
 **1. By gene name**    
 We are going to use the command below to get every record of FOXP2 for humans and other mammals.
@@ -129,6 +133,7 @@ Note how the command is built:
     - `ortholog`: the group for which we will download FOXP2 orthologs (same gene for different species), based on our reference species. 40674 is Mammals
     - `report product`: the type of report we want. In this case, we want the product, which contains the transcript information we need.
     - `as-json-lines`: the format we want our report in (has to be json because of the next command)
+- What about the backslash (`\`)? That means a line break - it allows us to write in many lines without breaking the command.
 
 
 ```sh
@@ -136,26 +141,31 @@ datasets summary gene symbol FOXP2 \
     --taxon 9606 \
     --ortholog 40674 \
     --report product \
-    --as-json-lines
+    --as-json-lines > foxp2_orthologs.jsonl
 ```
 
 
 **2. By accession number**  
-In this case, our input will be the accession numbers of the 10 sequences listed earlier. 
+Another way is to download sequences by accession number. This is useful if you already have a list of species you want to download and know their accession numbers from NCBI, for example:
+
+* Human (_Homo sapiens_) | NM_014491.4
+* Chimpanzee (_Pan troglodytes_) | XM_063813769.1
+* Cow (_Bos taurus_) | NM_001205569.3
+* Bottlenose dolphin (_Tursiops truncatus_) | XM_019925131.2
+* Killer whale (_Orcinus orca_) | XM_049715204.1
+* Harbor seal (_Phoca vitulina_) | XM_032401732.1
+* Dog (_Canis lupus familiaris_) | XM_038439870.1
+* Little brown bat (_Myotis lucifugus_) | XM_023760067.1
+* African elephant (_Loxodonta africana_) | XM_023544567.1
+* Manatee (_Trichechus manatus latirostris_) | XM_004382567.2
+
+Let's download the sequences for these species:
+
 ```sh
     datasets summary gene accession \
     NM_014491.4 XM_063813769.1 NM_001205569.3 XM_019925131.2 XM_049715204.1 XM_032401732.1 XM_038439870.1 XM_023760067.1 XM_023544567.1 XM_004382567.2 \
-    --report product --as-json-lines > foxp2_orthologs.jsonl
+    --report product --as-json-lines > foxp2_orthologs2.jsonl
 ```
-
-!!! note "What is metadata?"
-    Metadata is information that provides context about the data. For NCBI sequences, it can include:
-
-    * Common gene name
-    * Gene ID (an identifier unique to each gene)
-    * Species or taxon name
-    * Sequence accession number
-    * Sequence length
 
 ??? success "Well done! Click to unlock celebratory cat #1"
 
@@ -167,7 +177,7 @@ We will use the `dataformat` command to extract the [Gene Product Report](https:
 This report contains information about FOXP2 transcripts and proteins.
 The `--fields` option specifies which information to include in the table, such as gene ID, symbol, and transcript length.
 
-```bash
+```sh
 dataformat tsv gene-product \
 --inputfile foxp2_orthologs.jsonl \
 --fields gene-id,tax-name,symbol,transcript-accession,transcript-length,transcript-protein-accession,transcript-protein-length > transcript_protein.tsv
@@ -175,7 +185,7 @@ dataformat tsv gene-product \
 
 Let's take a look at this table using `head`, which displays the first 10 lines of a file. It's useful for taking a quick look at long files.
 
-```bash
+```sh
 head transcript_protein.tsv
 ```
 
@@ -306,7 +316,7 @@ If the progress bar reaches 100%, the download was successful. The result is a Z
 
 📍 Now let's look at the downloaded sequences by unzipping `longest.zip`:
 
-```bash
+```sh
 unzip longest.zip
 ```
 
