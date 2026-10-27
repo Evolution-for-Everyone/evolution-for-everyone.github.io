@@ -70,7 +70,7 @@ With your terminal open on one side of the screen, and this tutorial on the othe
 1. macOS users
 
     ```sh
-    brew install mat
+    brew install mafft
     ```
 
 2. Windows/Linux users
