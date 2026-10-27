@@ -5,7 +5,7 @@
 🍄 **What is the terminal?**
 
 The terminal is a text-based interface where you communicate with your computer by typing commands.
-In Linux and MacOS systems, the terminal uses a programming language called **bash**.
+To talk with the computer, the terminal uses a programming language. The most popular terminal languages in bioinformatics are **bash** and **zsh**.
 
 You can use the terminal to do anything you normally do in your computer! (for example, running programs, creating, editing and accessing files and folders.)
 
@@ -29,7 +29,7 @@ The terminal looks just like another app on your computer - but it will change s
 
 → **For Windows users**
 
-* The Windows native terminal does not work with **bash**, so it's not suitable for our needs.
+* The Windows native terminal does not work with **bash** or **zsh**, so it's not suitable for our needs.
 * When working with Windows computers, we need to install the Linux system to get access to the terminal.
 * For that, follow [this written tutorial](https://learn.microsoft.com/en-us/windows/wsl/install), or this [video tutorial](https://www.youtube.com/watch?v=sUsTQTJFmjs&ab_channel=ProgrammingKnowledge).
 
@@ -64,7 +64,7 @@ You can set them to anything you want!
 3️⃣ `$` or `%` is a prompt symbol, indicating that the terminal is waiting for a command.
 When you see this symbol, it means it's ok to type stuff on the terminal!
 
-_What about the `(base)` that shows on my screenshot?_
+_What about the `(base)` that shows on my screenshot?_  
 This is to indicate which environment you are in - we will see more details about that in the future.
 
 
@@ -147,8 +147,7 @@ cd: no such file or directory: work
 
 In this error, the computer is saying "there's nothing called work here". Because you are typing the command from your home, and your work directory is not inside home (it is inside home  Documents).
 
-!!! tip
-    **And here we get to an important terminal lesson:**
+!!! tip "**And here we get to an important terminal lesson:**"    
 
     A command on the terminal only works if you are running it from the correct location! That basically means that:
 
@@ -177,18 +176,27 @@ Now enter `ls`, to check if the folder was created. You should see it showing up
 tutorials
 ```
 
-You may have other folders in there as well - as long as you see the name of the folder you just created, it's all good!
+You may have other folders in there as well - as long as you see the name of the folder you just created, it's all good!    
 Now go inside our `tutorials` directory by using:
 
 ```bash
 cd tutorials
 ```
+
 and list what's inside it using `ls`. You should get an empty line, because the folder is empty:
 
 ```bash
 (base) letixa@eugenio tutorials % ls
 (base) letixa@eugenio tutorials %
 ```
+
+!!!tip 
+    **Using TAB as autocomplete**   
+
+    Instead of typing a full word, you can type only the first letter(s) and use `TAB` to autocomplete.    
+    For example, for the `cd` command above, you can type `cd t` + `TAB`, and it will autocomplete to `cd tutorials`.   
+
+    If you have another folder that begins with t, it will show you the possible options; keep hitting `TAB` to switch between them and press `Enter` when you find the right one.
 
 What if you want to go back to your original folder?    
 You can also use `cd`, followed by `../`, which means "the folder before this one":
