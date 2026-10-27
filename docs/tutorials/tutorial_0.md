@@ -73,12 +73,13 @@ This is to indicate which environment you are in - we will see more details abou
 !!! info "**List of commands**"
 
     * `pwd` — Print working directory: shows the directory you are in right now.
-    * `cd` — Change directory: moves to a different directory through the path you indicate.
     * `ls` — List: lists all the contents of a directory (files and subdirectories).
+    * `cd` — Change directory: moves to a different directory through the path you indicate.
     * `mkdir` — Make directory: creates a new directory.
     * `nano` — Text editor for creating and editing text files.
     * `cat` — Concatenate: displays the contents of a file or files.
     * `mv` — Move: moves or renames files or directories.
+    * `clear` - Clear: refreshes your screen clearing everything in it.
 
 ### 🍄 Moving between different directories
 
@@ -179,9 +180,17 @@ and list what's inside it using `ls`. You should get an empty line, because the 
 (base) letixa@eugenio tutorials %
 ```
 
+What if you want to go back to your original folder?    
+You can also use `cd`, followed by `../`, which means "the folder before this one":
+
+```sh
+cd ../
+```
+This tells your computer to go to the folder immediately before the one you're at right now.
+
 **🐞 Create a README file**
 
-Next, let's use the command `nano` to create a `README.txt` file inside your master folder:
+Next, let's use the command `nano` to create a `README.txt` file:
 
 ```bash
 nano README.txt
@@ -194,18 +203,18 @@ As soon as you enter this command, you should see an *empty black screen*. It's 
 Now, let's enter `ls` to see what's inside your `tutorials` folder. You should see a result like this:
 
 ```bash
-(base) letixa@eugenio tutorials % ls
+(base) letixa@eugenio Documents % ls
 README.txt
 ```
 You can come back to re-edit this file at any time, by entering `nano README.txt`, typing new lines below the title and then saving the document.
 To learn more about the `nano` command and how to use it, check out this [video tutorial](https://www.youtube.com/watch?v=g2PU--TctAM&ab_channel=SavvyNik)!
 
-**🐞 What if I want to see what's written in my file?**
+**🐞 What if I want to see what's written in my file?**     
 To take a look at any text file, we can use the command `cat`, followed by the file name.
 Type `cat README.txt` on your terminal and hit Enter. The terminal will display the content of your file, like this:
 
 ```bash
-(base) letixa@eugenio tutorials % cat README.txt
+(base) letixa@eugenio Documents % cat README.txt
 BIOINFORMATICS TUTORIALS
 ```
 The only thing written on your file is the title - so that's what the terminal will show!
@@ -229,6 +238,7 @@ Let's assume you wanted to change the name of your README file to `README_tutori
 ```bash
 mv README.txt README_tutorials.txt
 ```
+
 And, to check if the command worked, let's use `ls`:
 
 ```bash
@@ -239,7 +249,7 @@ Looks good!
 
 **🐞 Moving a file:**
 
-Let's say you made a mistake and created the `README.txt` file inside `Documents`, instead of `tutorials`. Creating a file in the wrong folder is a very common mistake, so how can we correct it?
+Let's say you want the `README.txt` file to be inside `tutorials`, instead of `Documents`. Creating a file in the wrong folder is a very common mistake, so how can we correct it?
 From inside `Documents`, we can enter mv followed by the file name and the new location, like this:
 
 ```bash
