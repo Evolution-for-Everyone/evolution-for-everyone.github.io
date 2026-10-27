@@ -68,7 +68,16 @@ _What about the `(base)` that shows on my screenshot?_
 This is to indicate which environment you are in - we will see more details about that in the future.
 
 
-## 3. Using bash in the terminal
+## 3. Using command-line (bash) in the terminal
+Now we are ready to begin typing commands from inside our terminal!         
+For the next steps, you will see a series of commands that you will type on your terminal, in front of the `%` or `$` sign, and then hit `Enter` to run. Some commands will require additional words in front of them, others won't.
+
+**Before getting started, rememeber**: terminal commands are case-sensitive!    
+So if you type `ls` it will work, but if you type `LS`, it wont't.
+
+
+Here's a cheat-sheet for the most popular commands:
+
 
 !!! info "**List of commands**"
 
@@ -80,6 +89,7 @@ This is to indicate which environment you are in - we will see more details abou
     * `cat` — Concatenate: displays the contents of a file or files.
     * `mv` — Move: moves or renames files or directories.
     * `clear` - Clear: refreshes your screen clearing everything in it.
+
 
 ### 🍄 Moving between different directories
 
@@ -250,7 +260,7 @@ Looks good!
 **🐞 Moving a file:**
 
 Let's say you want the `README.txt` file to be inside `tutorials`, instead of `Documents`. Creating a file in the wrong folder is a very common mistake, so how can we correct it?
-From inside `Documents`, we can enter mv followed by the file name and the new location, like this:
+From inside `Documents`, we can enter `mv` followed by the file name and the new location, like this:
 
 ```bash
 (base) letixa@eugenio Documents % mv README.txt tutorials
