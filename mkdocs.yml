@@ -24,6 +24,7 @@ theme:
     - navigation.tracking
     - navigation.path
     - navigation.top
+    - content.code.copy
 
   palette:
 
