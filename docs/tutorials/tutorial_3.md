@@ -67,37 +67,29 @@ Brace yourself and take a deep breath. Things will get a little more complicated
 
 ### 🍄 Downloading sequences using command-line
 
-We will now learn how to download genomic sequences using the command line.
-This is a useful way to download a set of **coding sequences**, which you can analyze with codon models such as **codeml**.
+We will now learn how to download genomic sequences using the command line. More specifically, we will download a set of **coding sequences** (the part of the gene that is translated into a protein) for the gene FOXP2. 
 
-This part of the tutorial was adapted from NCBI's own tutorial: [Get one protein per gene from a set of orthologs](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/tutorials/ortholog-get-one-isoform/). Feel free to check it out for more details!
+This workflow was adapted from NCBI's tutorial: [Get one protein per gene from a set of orthologs](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/tutorials/ortholog-get-one-isoform/). Feel free to check it out for more details!
 
-!!! note "Why choose one transcript per gene?"
+🐞 **Our goal is to download one sequence of FOXP2 for each species.**      
+
+!!! info "Why just one sequence?"
     Many genes undergo alternative splicing and have multiple transcript variants (mRNA isoforms). These transcripts come from the same gene, but their coding sequences and lengths can differ.
 
     Many comparative genomic studies use one sequence per gene. A common approach is to select the longest transcript, although the longest transcript is not necessarily the best representative of the complete coding sequence in every case.
 
-??? info "For Awarnach server users"
-    Access our lab server, Awarnach. For a reminder, see [Tutorial 2](tutorial_2.md).
 
-    Activate the environment where `ncbi_datasets` is installed:
+
+1. Activate the environment where `ncbi_datasets` is installed:
 
     ```sh
     source activate ncbi_datasets
     ```
 
-1. Download the `ncbi-datasets` command-line tool from NCBI using conda:
+2. From your tutorials folder, navigate to `tutorial_3` using `cd` followed by the path to the folder. 
 
     ```sh
-    conda install -c conda-forge ncbi-datasets-cli
-    ```
-
-    If that doesn't work, you can find alternative ways [here](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/).     
-
-2. Navigate to your `tutorial_3` folder using `cd` followed by the path to the folder:
-
-    ```sh
-    cd tutorials_2026/tutorial_3/
+    cd tutorials/tutorial_3/
     ```
 
 3. We will now download the longest FOXP2 transcript for each species. For the steps below, copy and paste the commands into your terminal and press `Enter`.   
@@ -123,7 +115,7 @@ We will use the `datasets summary` command to retrieve metadata about our FOXP2 
 
 We can donwload the metadata in two ways: by providing the **gene name** OR the **accession numbers** (a unique record number) of the sequences we want to download.  
 
-**1. By gene name**    
+**By gene name**    
 We are going to use the command below to get every record of FOXP2 for humans and other mammals.
 Note how the command is built:
 
@@ -145,7 +137,7 @@ datasets summary gene symbol FOXP2 \
 ```
 
 
-**2. By accession number**  
+**By accession number**  
 Another way is to download sequences by accession number. This is useful if you already have a list of species you want to download and know their accession numbers from NCBI, for example:
 
 * Human (_Homo sapiens_) | NM_014491.4
