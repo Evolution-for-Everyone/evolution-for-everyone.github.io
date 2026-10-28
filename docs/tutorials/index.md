@@ -23,10 +23,15 @@ These tutorials introduce a basic workflow in molecular evolution:
 - [Tutorial 5: Estimating gene trees with IQTree](tutorial_5.md)
 - [Tutorial 6: Natural selection analyses with codeml](tutorial_6.md)
 
-## Tutorials by our collaborators
+## More tutorials!
 
 - [Git and GitHub, command line and bash](https://github.com/YKul/Tutorials/wiki) — by Yuri Kulish
 - [Advanced codeml](https://github.com/Evolution-for-Everyone/bioinformatics-for-everyone/wiki/Codeml-%E2%80%90-Advanced-tutorial) — by Joseph Bielawski
+
+## Non-English tutorials 
+
+- [生物信息学入门指南](https://github.com/Zhiyi-Zhao/Bioinformatics-guidebook) - by Zhiyi Zhao
+- [初学者快速入门生物信息学必备技能的网络资源](https://github.com/Yixf-Education/forBeginners) - Yi Xianfu
 
 ## Online resources
 
