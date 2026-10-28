@@ -34,17 +34,16 @@ MAFFT is available online and from the command line, and we will learn how to us
 
 ### 🍄 Using MAFFT on command line
 
-1. Open a terminal and log in to your server account (Awarnach, Alliance, or another server).
-2. Navigate to your Tutorial 3 folder, then to the subfolder containing your FOXP2 sequences:
+1. Navigate to your Tutorial 3 folder, then to the subfolder containing your FOXP2 sequences:
 
     ```sh
     cd tutorial_3/ncbi_dataset/data/
     ```
 
-3. Copy your sequence files (`cds.fna`, `cds_headers.fna`, `rna.fna`, and `protein.faa`) from the Tutorial 3 folder to the Tutorial 4 folder:
+2. Copy your sequence files (`cds.fna` and `protein.faa`) from the Tutorial 3 folder to the Tutorial 4 folder:
 
     ```sh
-    cp cds.fna cds_headers.fna protein.faa rna.fna ../../../tutorial_4/
+    cp cds.fna protein.faa ../../../tutorial_4/
     ```
 
 4. Navigate to your Tutorial 4 folder and list its contents to check that the files were copied:
@@ -56,11 +55,12 @@ MAFFT is available online and from the command line, and we will learn how to us
 
     You should now see your sequence files in the folder.
 
-    ??? note "**Awarnach users only:**"  
-        Activate the conda environment where MAFFT is installed. MAFFT will not be available until you activate it.
+    ??? note "**If you have mafft in a conda environment**"  
+        Activate the conda environment where MAFFT is installed using one of the commands below. MAFFT will not be available until you activate it.
 
-            ```sh
+        ```sh
             source activate mafft
+            conda activate mafft
         ```
 
 5. Run MAFFT using a command with this format:
@@ -118,13 +118,11 @@ MAFFT is available online and from the command line, and we will learn how to us
 
 There are many programs for viewing and editing multi-species alignments. You can find a list of alignment viewers [here](https://en.wikipedia.org/wiki/List_of_alignment_visualization_software).
 
-Many alignment viewers have similar options, so feel free to choose the one that best suits your preferences. 🌸
-My favourite is [AliView](https://ormbunkar.se/aliview/), so this tutorial uses it to view alignments.
+Many alignment viewers have similar options, so feel free to choose the one that best suits your preferences.
 
 ### 🍄 Using AliView to visualize alignments
 
-1. Download [AliView](https://ormbunkar.se/aliview/#DOWNLOAD), choosing the download link for your operating system and version.
-2. Open AliView, select **File > Open file**, and navigate to the alignment you want to view.
+1. Open AliView, select **File > Open file**, and navigate to the alignment you want to view.
 
 ## 5. Editing alignments
 
