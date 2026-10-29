@@ -1,0 +1,1180 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://evolution-for-everyone.github.io/tutorials/tutorial_0/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../tutorial_1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Tutorial 0 - Evolution for Everyone</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-0-introduction-to-command-line-and-bash" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Evolution for Everyone" class="md-header__button md-logo" aria-label="Evolution for Everyone" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Evolution for Everyone
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial 0
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Evolution for Everyone" class="md-nav__button md-logo" aria-label="Evolution for Everyone" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Evolution for Everyone
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 0
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-opening-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Opening the terminal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-structure-of-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The structure of the terminal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-using-command-line-bash-in-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Using command-line (bash) in the terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Using command-line (bash) in the terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving-between-different-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Moving between different directories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-directories-and-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Creating directories and files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-and-moving-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Changing and moving files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-challenge-creating-a-folder-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Challenge: creating a folder structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-opening-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Opening the terminal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-structure-of-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The structure of the terminal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-using-command-line-bash-in-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Using command-line (bash) in the terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Using command-line (bash) in the terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving-between-different-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Moving between different directories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-directories-and-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Creating directories and files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-and-moving-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍄 Changing and moving files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-challenge-creating-a-folder-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Challenge: creating a folder structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tutorial-0-introduction-to-command-line-and-bash">Tutorial 0 - Introduction to command line and bash</h1>
+<h2 id="1-opening-the-terminal">1. Opening the terminal</h2>
+<p>🍄 <strong>What is the terminal?</strong></p>
+<p>The terminal is a text-based interface where you communicate with your computer by typing commands.<br />
+To talk with the computer, the terminal uses a programming language. The most popular terminal languages in bioinformatics are <strong>bash</strong> and <strong>zsh</strong>.</p>
+<p>You can use the terminal to do anything you normally do in your computer! (for example, running programs, creating, editing and accessing files and folders.)</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><em>What's so special about the terminal?</em><br />
+It allows you to run a lot of programs that don't have a graphic interface!</p>
+</div>
+<p>Many programs we use for analysis in evolutionary biology don't have a <em>graphic interface</em> - that means they don't have an app, a screen or clickable icons, and we have to interact with them using only programming language.</p>
+<p>🍄 <strong>Where do I find the terminal?</strong></p>
+<p>The terminal looks just like another app on your computer - but it will change slightly depending on the operating system you are on (Linux, MacOS or Windows). Follow the instructions below according to your system:</p>
+<p>→ <strong>For MacOS/Linux users</strong></p>
+<ul>
+<li>You can locate the <strong>terminal</strong> in the list of apps (launchpad) of your computer,</li>
+<li>or use the search option by pressing the F4 key (which should have an eyeglass 🔍 icon) and then typing <code>terminal</code> into the search box.</li>
+<li>The terminal icon looks like a black box with a <code>&lt;</code> and a <code>-</code>, like this:</li>
+</ul>
+<p><img alt="Terminal icon" src="https://github.com/user-attachments/assets/8c8aa650-9fb9-4275-a871-a96ea0fa190a" width="200" /></p>
+<p>→ <strong>For Windows users</strong></p>
+<ul>
+<li>The Windows native terminal does not work with <strong>bash</strong> or <strong>zsh</strong>, so it's not suitable for our needs.</li>
+<li>When working with Windows computers, we need to install the Linux system to get access to the terminal.</li>
+<li>For that, follow <a href="https://learn.microsoft.com/en-us/windows/wsl/install">this written tutorial</a>, or this <a href="https://www.youtube.com/watch?v=sUsTQTJFmjs&amp;ab_channel=ProgrammingKnowledge">video tutorial</a>.</li>
+</ul>
+<p>🐞 Once you have located the terminal on your computer, go ahead and open it! It should look like a black window with some text at the top, like this:</p>
+<p><img alt="Screenshot 2025-03-21 at 5 02 34 PM" src="https://github.com/user-attachments/assets/d1ca03b0-288d-47b1-879f-471da901e82b" /></p>
+<h2 id="2-the-structure-of-the-terminal">2. The structure of the terminal</h2>
+<p>Every time you open your terminal, you will see the following information at the top left corner:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>user@computer<span class="w"> </span>directory<span class="w"> </span>%<span class="w"> </span><span class="c1"># if you are using MacOS</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>user@computer:directory$<span class="w"> </span><span class="c1"># if you are using Linux/Unix</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This line is called the <strong>prompt</strong>, and it means the computer is ready to accept a command from you - in other words, it's <em>prompting</em> you.</p>
+</div>
+<p>🍄 <strong>Now let's break down the elements of the prompt:</strong></p>
+<p>1️⃣ <code>user</code> and <code>computer</code> are the names you set up for yourself and your computer<br />
+For example, my user name is <em>letixa</em> and my computer name is <em>eujenio</em>.<br />
+You can set them to anything you want!</p>
+<p>2️⃣ <code>directory</code> is the folder you are currently in (<em>computer people use this fancy name directory, which really just means folder</em>).</p>
+<ul>
+<li>Some operating systems (OS) will only show the name of the directory, while others will show the whole path to that directory.</li>
+<li>When you open your terminal, the directory will show as <code>~</code>. This is a path symbol that represents your <strong>HOME directory</strong>.</li>
+</ul>
+<p>3️⃣ <code>$</code> or <code>%</code> is a prompt symbol, indicating that the terminal is waiting for a command.<br />
+When you see this symbol, it means it's ok to type stuff on the terminal!</p>
+<p><em>What about the <code>(base)</code> that shows on my screenshot?</em><br />
+This is to indicate which environment you are in - we will see more details about that in the future.</p>
+<h2 id="3-using-command-line-bash-in-the-terminal">3. Using command-line (bash) in the terminal</h2>
+<p>Now we are ready to begin typing commands from inside our terminal!       <br />
+For the next steps, you will see a series of commands that you will type on your terminal, in front of the <code>%</code> or <code>$</code> sign, and then hit <code>Enter</code> to run. Some commands will require additional words in front of them, others won't.</p>
+<p><strong>Before getting started, rememeber</strong>: terminal commands are case-sensitive!  <br />
+So if you type <code>ls</code> it will work, but if you type <code>LS</code>, it wont't.</p>
+<p>Here's a cheat-sheet for the most popular commands:</p>
+<div class="admonition info">
+<p class="admonition-title"><strong>List of commands</strong></p>
+<ul>
+<li><code>pwd</code> — Print working directory: shows the directory you are in right now.</li>
+<li><code>ls</code> — List: lists all the contents of a directory (files and subdirectories).</li>
+<li><code>cd</code> — Change directory: moves to a different directory through the path you indicate.</li>
+<li><code>mkdir</code> — Make directory: creates a new directory.</li>
+<li><code>nano</code> — Text editor for creating and editing text files.</li>
+<li><code>cat</code> — Concatenate: displays the contents of a file or files.</li>
+<li><code>mv</code> — Move: moves or renames files or directories.</li>
+<li><code>clear</code> - Clear: refreshes your screen clearing everything in it.</li>
+</ul>
+</div>
+<h3 id="moving-between-different-directories">🍄 Moving between different directories</h3>
+<p><strong>🐞 First, let's find out where we are</strong> (aka our working directory).<br />
+Type <code>pwd</code> in your prompt, then hit Enter.<br />
+You should see a set of words separated by slashes show up in the next line, like in the example below:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>~<span class="w"> </span>%<span class="w"> </span><span class="nb">pwd</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>/Users/letixa
+</span></code></pre></div>
+<p><strong>This line represents the complete pathway to the directory (folder) you are currently in.</strong></p>
+<p>In my case, I am in my home directory, located at <code>/Users/letixa</code>.</p>
+<p><strong>🐞 What files are inside my home directory?</strong> <em>We can use <code>ls</code> to find out!</em><br />
+Type <code>ls</code> in your prompt, then hit Enter.<br />
+The screen will show a bunch of words - these are the names of all folders and files you have inside your home directory.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>~<span class="w"> </span>%<span class="w"> </span>ls
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Applications<span class="w">            </span>Library<span class="w">                 </span>Public
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Desktop<span class="w">                 </span>Mesquite_Support_Files<span class="w">  </span>Zotero
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Documents<span class="w">               </span>Movies<span class="w">                  </span>src
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Downloads<span class="w">               </span>Music<span class="w">                   </span>zsh-syntax-highlighting
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Google<span class="w"> </span>Drive<span class="w">            </span>Pictures
+</span></code></pre></div>
+<p><strong>🐞 Now let's go to the directory where we want to work!</strong><br />
+Choose a folder in your home to start organizing your tutorial files. Then, navigate to that folder using <code>cd</code> followed by the folder name.<br />
+For example, I want to go to my Documents directory, which is inside my home directory:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>~<span class="w"> </span>%<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>Documents
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>Documents<span class="w"> </span>%
+</span></code></pre></div>
+<p>Note that the <code>directory</code> on your prompt has now changed from <code>~</code> to the name of the directory you just entered (in my case, <code>Documents</code>). Now you are inside Documents!</p>
+<p><strong>🐞 What if I want to go to a folder that's inside another folder?</strong><br />
+In that case, if you try to just type the name of the folder, the computer won't know where to go.<br />
+You need to use <code>cd</code> along with <em>the complete path to that folder starting from your current location</em>, like this:</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>~<span class="w"> </span>%<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>Documents/work
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>work<span class="w"> </span>%
+</span></code></pre></div><br />
+In this example, I went to the directory <code>work</code>, which is inside <code>Documents</code>. If I had just used <code>cd work</code>, I would get an error like this:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>~<span class="w"> </span>%<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>work
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>cd:<span class="w"> </span>no<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory:<span class="w"> </span>work
+</span></code></pre></div>
+<p>In this error, the computer is saying "there's nothing called work here". Because you are typing the command from your home, and your work directory is not inside home (it is inside home  Documents).</p>
+<div class="admonition tip">
+<p class="admonition-title"><strong>And here we get to an important terminal lesson:</strong></p>
+<p>A command on the terminal only works if you are running it from the correct location! That basically means that:</p>
+<ul>
+<li>If the file or folder targeted by your command is located where you are, you can just type <code>[command] [space] [name of file/folder]</code>.</li>
+<li><strong>However</strong>, if your target is in a different location, your command needs to include the path to that file or folder. We will see many examples of this later!</li>
+</ul>
+</div>
+<hr />
+<h3 id="creating-directories-and-files"><strong>🍄 Creating directories and files</strong></h3>
+<p><em>Now that you are in the right location to store your tutorials, let's start making some folders to keep things organized!</em></p>
+<p><strong>🐞 Create a master directory</strong></p>
+<p>First, we'll make a master folder to contain everything related to our tutorials.<br />
+For that, enter the <code>mkdir</code> command followed by the name you wish to give your folder, like this:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mkdir<span class="w"> </span>tutorials
+</span></code></pre></div>
+<p>Now enter <code>ls</code>, to check if the folder was created. You should see it showing up in your screen like this:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>Documents<span class="w"> </span>%<span class="w"> </span>ls
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>tutorials
+</span></code></pre></div>
+<p>You may have other folders in there as well - as long as you see the name of the folder you just created, it's all good!  <br />
+Now go inside our <code>tutorials</code> directory by using:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>tutorials
+</span></code></pre></div>
+<p>and list what's inside it using <code>ls</code>. You should get an empty line, because the folder is empty:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>tutorials<span class="w"> </span>%<span class="w"> </span>ls
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>tutorials<span class="w"> </span>%
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Using TAB as autocomplete</strong>   </p>
+<p>Instead of typing a full word, you can type only the first letter(s) and use <code>TAB</code> to autocomplete.  <br />
+For example, for the <code>cd</code> command above, you can type <code>cd t</code> + <code>TAB</code>, and it will autocomplete to <code>cd tutorials</code>.   </p>
+<p>If you have another folder that begins with t, it will show you the possible options; keep hitting <code>TAB</code> to switch between them and press <code>Enter</code> when you find the right one.</p>
+</div>
+<p>What if you want to go back to your original folder?  <br />
+You can also use <code>cd</code>, followed by <code>../</code>, which means "the folder before this one":</p>
+<p><div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">cd</span><span class="w"> </span>../
+</span></code></pre></div><br />
+This tells your computer to go to the folder immediately before the one you're at right now.</p>
+<p><strong>🐞 Create a README file</strong></p>
+<p>Next, let's use the command <code>nano</code> to create a <code>README.txt</code> file:</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>nano<span class="w"> </span>README.txt
+</span></code></pre></div><br />
+As soon as you enter this command, you should see an <em>empty black screen</em>. It's all good! This is how an empty document looks in your terminal. You can type anything on it and it will be saved as a text file! So let's do it:</p>
+<ul>
+<li>Type a title for your README file (for example, BIOINFORMATICS TUTORIALS).</li>
+<li>Then use <code>Ctrl + X</code>, followed by Y and Enter to exit and save the file.</li>
+</ul>
+<p>Now, let's enter <code>ls</code> to see what's inside your <code>tutorials</code> folder. You should see a result like this:</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>Documents<span class="w"> </span>%<span class="w"> </span>ls
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>README.txt
+</span></code></pre></div><br />
+You can come back to re-edit this file at any time, by entering <code>nano README.txt</code>, typing new lines below the title and then saving the document.<br />
+To learn more about the <code>nano</code> command and how to use it, check out this <a href="https://www.youtube.com/watch?v=g2PU--TctAM&amp;ab_channel=SavvyNik">video tutorial</a>!</p>
+<p><strong>🐞 What if I want to see what's written in my file?</strong>   <br />
+To take a look at any text file, we can use the command <code>cat</code>, followed by the file name.<br />
+Type <code>cat README.txt</code> on your terminal and hit Enter. The terminal will display the content of your file, like this:</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>Documents<span class="w"> </span>%<span class="w"> </span>cat<span class="w"> </span>README.txt
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>BIOINFORMATICS<span class="w"> </span>TUTORIALS
+</span></code></pre></div><br />
+The only thing written on your file is the title - so that's what the terminal will show!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To take this lesson further, try writing the content of your README file!<br />
+For more information on how to write a README file, check <a href="https://www.makeareadme.com/">this webpage</a>.</p>
+</div>
+<hr />
+<h3 id="changing-and-moving-files">🍄 Changing and moving files</h3>
+<p><em>Can I change the name and location of a file?</em></p>
+<p>Yes you can! The <code>mv</code> command allows you to do both. Let's check it out:</p>
+<p><strong>🐞 Renaming a file:</strong></p>
+<p>Let's assume you wanted to change the name of your README file to <code>README_tutorials.txt</code>, to make it more specific. You can do that by entering <code>mv</code> followed by the old name, then the new name, like this:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>mv<span class="w"> </span>README.txt<span class="w"> </span>README_tutorials.txt
+</span></code></pre></div>
+<p>And, to check if the command worked, let's use <code>ls</code>:</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>tutorials<span class="w"> </span>%<span class="w"> </span>ls
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>README_tutorials.txt
+</span></code></pre></div><br />
+Looks good!</p>
+<p><strong>🐞 Moving a file:</strong></p>
+<p>Let's say you want the <code>README.txt</code> file to be inside <code>tutorials</code>, instead of <code>Documents</code>. Creating a file in the wrong folder is a very common mistake, so how can we correct it?<br />
+From inside <code>Documents</code>, we can enter <code>mv</code> followed by the file name and the new location, like this:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>Documents<span class="w"> </span>%<span class="w"> </span>mv<span class="w"> </span>README.txt<span class="w"> </span>tutorials
+</span></code></pre></div>
+<p>You can now navigate to <code>tutorials</code> and check if <code>README.txt</code> is there, like this:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>Documents<span class="w"> </span>%<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>tutorials
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>tutorials<span class="w"> </span>%<span class="w"> </span>ls
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>README.txt
+</span></code></pre></div>
+<p>Success!</p>
+<h2 id="4-challenge-creating-a-folder-structure">4. Challenge: creating a folder structure</h2>
+<p><em>Every bioinformatician needs to be organized!</em><br />
+In this challenge, we will create folders to store data, notes and exercises for our tutorials.<br />
+Try to type the command by yourself first, then open the toggle to check.</p>
+<p>(Before starting, make sure you are inside the <code>tutorials</code> folder.)</p>
+<p>🐞 Create a directory named <code>sandbox</code></p>
+<p>A sandbox is a place where we can test everything without compromising our analysis. It's always good to have one!</p>
+<details class="note">
+<summary>Click to check command</summary>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>mkdir<span class="w"> </span>sandbox
+</span></code></pre></div>
+</details>
+<p>🐞 Create one directory for each tutorial.</p>
+<p>Suggestion of name: <code>tutorial_1</code>, <code>tutorial_2</code>, etc. (Always use <code>_</code> instead of spaces, because spaces don't go well in the terminal.)</p>
+<details class="note">
+<summary>Click to check command</summary>
+<p>There are two ways you can do this:</p>
+<ul>
+<li>Use <code>mkdir</code> individually for each folder, or</li>
+<li>Create all folders at once:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>mkdir<span class="w"> </span>tutorial_1<span class="w"> </span>tutorial_2<span class="w"> </span>tutorial_3<span class="w"> </span>tutorial_4<span class="w"> </span>tutorial_5<span class="w"> </span>tutorial_6
+</span></code></pre></div>
+</details>
+<p>Now when you list the content of your master folder, you should see something like this:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>letixa@eugenio<span class="w"> </span>tutorials<span class="w"> </span>%<span class="w"> </span>ls
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>README.txt<span class="w"> </span>tutorial_1<span class="w"> </span>tutorial_3<span class="w"> </span>tutorial_5
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>sandbox<span class="w">    </span>tutorial_2<span class="w"> </span>tutorial_4<span class="w"> </span>tutorial_6
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Got an error after typing a command?</strong></p>
+<p>Here's a few things you can check before telling your computer to go to %@#!</p>
+<ul>
+<li>Are you in the right folder?</li>
+<li>Did you type the right pathways for the input options?</li>
+<li>Did you spell everything right? No typos?</li>
+</ul>
+<p><strong>Remember</strong>: Computers are really dumb! You have to tell them exactly what you want.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.tracking", "navigation.path", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>
