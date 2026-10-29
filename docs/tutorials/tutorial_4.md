@@ -40,10 +40,10 @@ MAFFT is available online and from the command line, and we will learn how to us
     cd tutorial_3/ncbi_dataset/data/
     ```
 
-2. Copy your sequence files (`cds.fna` and `protein.faa`) from the Tutorial 3 folder to the Tutorial 4 folder:
+2. Copy your coding sequence file - the final output from tutorial 3(`cds_headers.fna`) from the Tutorial 3 folder to the Tutorial 4 folder:
 
     ```sh
-    cp cds.fna protein.faa ../../../tutorial_4/
+    cp cds_headers.fna _ ../../../tutorial_4/
     ```
 
 4. Navigate to your Tutorial 4 folder and list its contents to check that the files were copied:
@@ -78,7 +78,7 @@ MAFFT is available online and from the command line, and we will learn how to us
     Here's an example command:
 
     ```sh
-    mafft --nuc --globalpair --maxiterate 1000 --inputorder cds.fna > FOXP2_nuc_aligned_mafft.fasta
+    mafft --nuc --globalpair --maxiterate 1000 --inputorder cds_headers.fna > FOXP2_nuc_aligned_mafft.fasta
     ```
 
     `cds.fna` is the **unaligned** sequence file downloaded from NCBI. `FOXP2_nuc_aligned_mafft.fasta` is an example output name; you can choose another name, but keep the `.fasta` extension.

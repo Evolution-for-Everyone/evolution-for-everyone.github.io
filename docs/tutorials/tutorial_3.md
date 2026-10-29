@@ -89,7 +89,7 @@ This workflow was adapted from NCBI's tutorial: [Get one protein per gene from a
 2. From your tutorials folder, navigate to `tutorial_3` using `cd` followed by the path to the folder. 
 
     ```sh
-    cd tutorials/tutorial_3/
+    cd tutorial_3
     ```
 
 3. We will now download the longest FOXP2 transcript for each species. For the steps below, copy and paste the commands into your terminal and press `Enter`.   
@@ -102,7 +102,7 @@ This workflow was adapted from NCBI's tutorial: [Get one protein per gene from a
 
 #### **🐞 Getting FOXP2 metadata**
 
-We will use the `datasets summary` command to retrieve metadata about our FOXP2 sequences.  
+We will use the `datasets summary` command to retrieve metadata about our FOXP2 sequences. We'll use this metadata to figure out which transcript is the longest. 
 
 !!! info "What is metadata?"
     Metadata is information that provides context about the data. For NCBI sequences, it can include:
@@ -433,3 +433,12 @@ awk -F' ' '
 {print}  # Print sequence lines unchanged
 ' cds.fna > cds_headers.fna
 ```
+
+!!!success "**Yaay! You did it!**"
+    Your final output is the `cds_headers.fna` file. Remember this for tutorial 4.
+    Also, don't forget to deactivate your `ncbi_datasets environment` by using one of these commands below:
+
+    ```sh
+    conda deactivate
+    source deactivate
+    ```
